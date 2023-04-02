@@ -6,6 +6,7 @@ import useInfinitePaging from '@/components/useInfinitePaging'
 import Newsletter from '@/components/Newsletter'
 import Reveal from '@/components/Reveal'
 import Sep from '@/components/Sep'
+import TipJar from '@/components/TipJar'
 
 const Layout = ({ pagination, collection, slug, content, categories }) => {
   const { records, infinitePaging } = collection
@@ -81,6 +82,7 @@ const Layout = ({ pagination, collection, slug, content, categories }) => {
           />
         </div>
       </div>
+      <TipJar/>
     </div>
   )
 }

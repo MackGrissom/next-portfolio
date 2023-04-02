@@ -63,3 +63,15 @@
 #__next > div > div.relative.w-full.max-w-screen-xl > main > div > div > div.items-center.text-center.md\:flex.md\:text-left > div.inline-block.shrink-0.md\:order-2.md\:-ml-40 > div.bottom-0 > div > img {
 margin-bottom: 195px;
 }
+
+#__next > div > div.relative.w-full.max-w-screen-xl > main > div > div > div.items-end.text-center.md\:flex.md\:text-left > div.relative.shrink-0.basis-1\/2.text-center.md\:order-2.md\:-ml-20 > div.hidden.md\:block > div > img {
+  color: transparent;
+  position: relative;
+  width: -webkit-fill-available;
+  left: 135px;
+  border-radius: 163px;
+}
+
+#__next > div > div.relative.w-full.max-w-screen-xl > main > div > div {
+  padding: 3rem!important;
+}

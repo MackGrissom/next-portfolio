@@ -5,6 +5,7 @@ import Image from '@/components/Image'
 import Sep from '@/components/Sep'
 import Reveal from '@/components/Reveal'
 import Companies from '@/components/Companies'
+import TipJar from '@/components/TipJar'
 
 const HeroPhoto = ({ main }) => (
   <>
@@ -87,9 +88,10 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
         </div>
       </div>
       <div className="mt-6 mt-12 hidden w-3/4 px-2 pr-12 md:block">
-        <Companies {...companies} />
+        {/* <Companies {...companies} /> */}
       </div>
     </div>
+    <TipJar />
   </div>
 )
 

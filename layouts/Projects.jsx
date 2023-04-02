@@ -2,11 +2,13 @@ import ProjectCardHorizontal from '@/components/ProjectCardHorizontal'
 import RepositoryCard from '@/components/RepositoryCard'
 import ContentRenderer from '@/components/ContentRenderer'
 import Reveal from '@/components/Reveal'
+import TipJar from '@/components/TipJar'
 
 const Layout = ({ projects, github }) => {
   return (
-    <div className="mx-auto p-3 md:p-6 lg:p-12">
+    <div className="mx-auto p-3 md:p-6 lg:p-12"> 
       <div className="prose prose-headings:mb-4 dark:prose-invert">
+        
         <ContentRenderer source={github} />
         <div className="mt-4 grid grid-cols-fluid gap-4 [--tw-fluid-col-min:15rem] md:mt-12 md:gap-6">
           {github?.repositories?.records?.map((item, i) => (
@@ -15,7 +17,7 @@ const Layout = ({ projects, github }) => {
             </Reveal>
           ))}
         </div>
-        <div className="my-6 md:my-12"></div>
+        <div className="my-6 md:my-12"> <TipJar/></div>
         <ContentRenderer source={projects} />
         <div className="mt-4 grid gap-4 md:mt-12 md:gap-6">
           {projects?.collection?.records?.map((item, i) => (

@@ -18,10 +18,7 @@ const ProjectCardHorizontal = ({
   link,
   github
 }) => (
-  <div className='mb-10'>  <Button href={link}
-  className='mx-5'> {title}</Button>
-    <Button href={github}
-  className='mx-5'>Github Repository </Button>
+  <div className='mb-10'> 
   <div
     href={slug.join('/')}
     aria-label={title}
@@ -82,6 +79,10 @@ const ProjectCardHorizontal = ({
         </h4>
       </Link>
       <small className="mt-6 block">{description}</small>
+      <Button href={link}
+  className='mx-5 h-[20%]'> Live Site</Button>
+    <Button href={github}
+  className='mx-20 mt-5 h-[20%]'>Github Repository </Button>
       {tags && (
         <>
           <div className="mb-2 mt-6 font-bold dark:text-accent-400">Technologies</div>

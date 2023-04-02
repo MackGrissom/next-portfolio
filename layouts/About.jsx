@@ -5,6 +5,7 @@ import Typewriter from '@/components/Typewriter'
 import Reveal from '@/components/Reveal'
 import Image from '@/components/Image'
 import Icon from '@/components/Icon'
+import TipJar from '@/components/TipJar'
 
 const History = ({ title, list }) => (
   <>
@@ -113,6 +114,7 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
           <Reveal animation="fade-in slide-in-top" className="prose p-6 dark:prose-invert md:p-12">
             <ContentRenderer source={personal_info} />
           </Reveal>
+          <TipJar />
         </div>
       </div>
       {history && (
@@ -122,6 +124,7 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
               <History {...props} />
             </div>
           ))}
+        
         </div>
       )}
     </div>

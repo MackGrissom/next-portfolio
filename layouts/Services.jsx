@@ -2,6 +2,7 @@ import React from 'react'
 import ContentRenderer from '@/components/ContentRenderer'
 import Reveal from '@/components/Reveal'
 import Icon from '@/components/Icon'
+import TipJar from '@/components/TipJar'
 
 const Services01 = ({ main = {}, services = [] }) => (
   <div className="mx-auto my-auto p-3 md:p-6 lg:p-12">
@@ -32,6 +33,7 @@ const Services01 = ({ main = {}, services = [] }) => (
         ))}
       </div>
     </div>
+    <TipJar/>
   </div>
 )
 

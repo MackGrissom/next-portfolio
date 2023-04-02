@@ -81,12 +81,12 @@ export const config = {
     timeZone: 'UTC',
   },
   convertKit: {
-    tipUrl: 'https://fantastic-mover-3439.ck.page/products/blog',
+    tipUrl: 'https://mackgrissom.ck.page/products/mackgrissom',
   },
   contactForm: {
     inputs: require('./content/contact-form.json'),
-    recipient: 'RECIPIENT@EXAMPLE.com',
-    sender: 'SENDER@EXAMPLE.com',
+    recipient: 'mack@mackgrissom.io',
+    sender: 'mack@mackgrissom.io',
     subject: 'EMAIL NOTIFICATION SUBJECT',
   },
 }

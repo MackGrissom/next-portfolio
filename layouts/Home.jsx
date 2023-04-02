@@ -93,7 +93,7 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
       </div>
     </div>
     <div className="mt-6 mt-12 hidden px-4 md:block">
-      <Companies {...companies} />
+     
     </div>
   </div>
 )
