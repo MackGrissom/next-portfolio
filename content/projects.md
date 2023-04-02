@@ -7,9 +7,7 @@ seo:
 
 ---github
 repositories:
-  - leerob/leerob.io
-  - jxnblk/mdx-deck
-  - vercel/og-image
+  - mackgrissom/
 ---
 <PageTitle>
   ### Projects
