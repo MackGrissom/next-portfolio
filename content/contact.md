@@ -27,7 +27,7 @@ Use the form on this page, give me a call or get in touch on LinkedIn
 
   <Icon src="/icons/mail.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Email: mack@mackgrissom.io
 
-  <Icon src="/icons/logo-linkedin.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Linkedin: [CarlHanson](http://linkedin.com/mackgrissom)
+  <Icon src="/icons/logo-linkedin.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Linkedin: [Mack Grissom](http://linkedin.com/mackgrissom)
 
   
 </small>

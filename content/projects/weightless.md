@@ -8,12 +8,12 @@ tags:
   - Tailwind
 logo:
   src: 
-  alt: Empower Advocacy LLC
+  alt: Ecommerce Landing Page Design
 images:
-  - src: /projects/project-3.png
+  - src: /projects/weightless.jpg
     alt: Control Panel Dashboard
     overlay:
-      src: /projects/project-3-mobile.png
+      src: /projects/weightless-mobile.jpg
       alt: Control Panel Mobile
   - src: /projects/project-1.png
     alt: Customers Dashboard

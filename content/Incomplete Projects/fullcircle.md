@@ -10,18 +10,18 @@ tags:
   - react
 logo:
   src: 
-  alt: API Driven Top Music Charts Player
+  alt: Web Development Agency Landing Page
 images:
-  - src: /projects/project-1.png
+  - src: /projects/fullcircle.png
     alt: image alt text
     overlay:
-      src: /projects/project-1-mobile.png
+      src: /projects/fullcircle-mobile.png
       alt: overlay image
-  - src: /projects/project-2.png
+  - src: /projects/fullcircle.png
     alt: image alt text
 attributes:
   - label: Duration
-    value: 2 Months
+    value: 1 Month
   
 ---
 

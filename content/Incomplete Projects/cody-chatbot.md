@@ -1,14 +1,14 @@
 ---
 layout: Post
-title: Landing Page For Special Education Advocacy Company
-description: A landing page for a special education advocacy company. 
+title: Cody - Chat GPT Codex
+description: Using OpenAI API this retro styled chatbot provides you with coding knowledge. 
 date: '2022-11-22'
 tags:
   - React
   - Tailwind
 logo:
   src: 
-  alt: Empower Advocacy LLC
+  alt: Open-AI Codex
 images:
   - src: /projects/project-3.png
     alt: Control Panel Dashboard

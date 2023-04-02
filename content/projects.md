@@ -7,14 +7,12 @@ seo:
 
 ---github
 repositories:
-  - mackgrissom/
+
+ 
 ---
-<PageTitle>
-  ### Projects
 
-  ### _See My Latest Work_
 
-</PageTitle>
+## <Typewriter>Check Out My Latest Work Below...</Typewriter>
 
 
 

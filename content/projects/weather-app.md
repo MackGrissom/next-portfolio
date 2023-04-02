@@ -10,19 +10,13 @@ logo:
   src: 
   alt: Weather app
 images:
-  - src: /projects/project-3.png
+  - src: /projects/weather.jpg
     alt: Control Panel Dashboard
     overlay:
-      src: /projects/project-3-mobile.png
+      src: /projects/weather-mobile.jpg
       alt: Control Panel Mobile
-  - src: /projects/project-1.png
-    alt: Customers Dashboard
-  - src: /projects/project-2.png
-    alt: Inovice & Payments
-  - src: /projects/project-3.png
-    alt: Inovice & Payments
-  - src: /projects/project-4.png
-    alt: Inovice & Payments
+  - src: /projects/weather.jpg
+
 attributes:
   - label: Duration
     value: 2 Weeks

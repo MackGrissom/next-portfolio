@@ -1,6 +1,6 @@
 ---
 layout: Post
-title: Redux Shopping Card
+title: Redux Shopping Cart
 description: A landing page for a special education advocacy company. 
 date: '2022-11-22'
 link: https://prismatic-fenglisu-9a68d5.netlify.app/
@@ -9,21 +9,14 @@ tags:
   - Tailwind
 logo:
   src: 
-  alt: Empower Advocacy LLC
+  alt: Witness the power of Redux!
 images:
-  - src: /projects/project-3.png
+  - src: /projects/redux.jpg
     alt: Control Panel Dashboard
     overlay:
-      src: /projects/project-3-mobile.png
+      src: /projects/redux-mobile.jpg
       alt: Control Panel Mobile
-  - src: /projects/project-1.png
-    alt: Customers Dashboard
-  - src: /projects/project-2.png
-    alt: Inovice & Payments
-  - src: /projects/project-3.png
-    alt: Inovice & Payments
-  - src: /projects/project-4.png
-    alt: Inovice & Payments
+
 attributes:
   - label: Duration
     value: 2 Weeks
