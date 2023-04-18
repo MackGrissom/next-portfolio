@@ -62,7 +62,7 @@ export const social = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/mackgrissom',
+    url: 'https://www.linkedin.com/in/mackgrissom/',
     Icon: IoLogoLinkedin,
   },
 ]
