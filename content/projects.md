@@ -12,7 +12,6 @@ repositories:
 ---
 
 
-## <Typewriter>Check Out My Latest Work Below...</Typewriter>
 
 
 
