@@ -12,7 +12,7 @@ repositories:
 ---
 
 
-## <Typewriter>Projects.</Typewriter>
+
 
 
 
