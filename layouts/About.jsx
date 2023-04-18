@@ -114,7 +114,7 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
           <Reveal animation="fade-in slide-in-top" className="prose p-6 dark:prose-invert md:p-12">
             <ContentRenderer source={personal_info} />
           </Reveal>
-          <TipJar />
+       
         </div>
       </div>
       {history && (
