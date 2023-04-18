@@ -45,14 +45,6 @@ Let's super-charge your business today!
 
 
 
----skills_header
-title: I'm Specialized in
-list:
-  - Front-End Design
-  - Front-End Development
-  - Modern Frameworks
-  - Landing Pages
----
 
 
 

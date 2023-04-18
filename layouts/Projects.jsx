@@ -17,7 +17,7 @@ const Layout = ({ projects, github }) => {
             </Reveal>
           ))}
         </div>
-        <div className="my-6 md:my-12"> <TipJar/></div>
+      
         <ContentRenderer source={projects} />
         <div className="mt-4 grid gap-4 md:mt-12 md:gap-6">
           {projects?.collection?.records?.map((item, i) => (
