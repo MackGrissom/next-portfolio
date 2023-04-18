@@ -80,9 +80,9 @@ const ProjectCardHorizontal = ({
       </Link>
       <small className="mt-6 block">{description}</small>
       <Button href={link}
-  className='mx-5 h-[20%] w-[20%]'> Live Site</Button>
+  className='mx-5 h-[20%] w-[20%]'> Site</Button>
     <Button href={github}
-  className='mx-20 mt-5 h-[20%] w-[20%]'>Github Repo </Button>
+  className='mx-20 mt-5 h-[20%] w-[20%]'>Github </Button>
       {tags && (
         <>
           <div className="mb-2 mt-6 font-bold dark:text-accent-400">Technologies</div>
