@@ -8,6 +8,9 @@ tags:
 featured: true
 ---
 
+
+# Why Using Website Builders is Bad for Business: Statistics
+
 - A study by Blue Corona found that 48% of people cited a website's design as the number one factor in deciding the credibility of a business.
 
 - According to a study by Google, the probability of bounce increases by 32% as page load time goes from 1 second to 3 seconds.
@@ -16,7 +19,6 @@ featured: true
 
 - Small Business Trends found that 43% of cyberattacks target small businesses.
 
-# Why Using Website Builders is Bad for Business: Statistics
 
 Website builders have become increasingly popular in recent years, promising a quick and easy solution to creating a website without the need for coding knowledge or technical expertise. However, while they may seem like an attractive option for small business owners on a budget, using website builders can ultimately be detrimental to your business. Here are some statistics that illustrate why:
 
