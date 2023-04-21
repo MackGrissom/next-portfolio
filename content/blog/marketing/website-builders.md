@@ -8,7 +8,6 @@ tags:
 featured: true
 ---
 
-# Stats
 - A study by Blue Corona found that 48% of people cited a website's design as the number one factor in deciding the credibility of a business.
 
 - According to a study by Google, the probability of bounce increases by 32% as page load time goes from 1 second to 3 seconds.
