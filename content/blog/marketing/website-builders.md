@@ -2,7 +2,7 @@
 layout: Post
 title: "Website Builders Suck..Here's Why"
 description: The article discusses why using website builders can be detrimental to a business and provides statistics to support this claim. It highlights limitations in customization, slow load times, poor SEO, limited functionality, and security concerns as reasons why website builders may not be the best option for businesses. The article concludes that while custom-built websites may require a larger investment upfront, they offer greater flexibility, functionality, and security, and can ultimately lead to a better return on investment in the long run.
-git 
+date: ''
 tags:
   - marketing
 featured: true
