@@ -9,7 +9,7 @@ featured: true
 ---
 
 
-# Why Using Website Builders is Bad for Business: Statistics
+#  Website Builders Suck. Here's Why
 
 - A study by Blue Corona found that 48% of people cited a website's design as the number one factor in deciding the credibility of a business.
 
