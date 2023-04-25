@@ -17,7 +17,7 @@ images:
 
 # <Typewriter>Mack Grissom</Typewriter>
 
-# *Web Developer* <span>&</span> *Growth Consultant*
+# *Web Developer* <span>&</span> *Consultant*
 
 I specialize in creating and managing websites for individuals and organizations. With a passion for web development and business growth, I have built a portfolio that showcases my technical expertise and my ability to help businesses achieve their goals. 
 
