@@ -115,7 +115,7 @@ export const siteMetaData = {
   siteName: 'Mack Grissom',
   defaultTitle: 'Mack Grissom Freelance Portfolio',
   titleTemplate: 'Mack Grissom',
-  description: 'A Freelance Web Developer Named Mack Grissom Portfolio',
+  description: 'Mack grissom Freelance Web Developer',
   email: 'mack@mackgrissom.io',
   locale: 'en_US',
 
