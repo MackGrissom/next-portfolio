@@ -3,7 +3,7 @@ layout: Post
 title: Sumorize
 description:  Open-Source Article & Webpage Summarizer that Simplifies Complex Content Using GPT-4 By OpenAI
 date: '2023-05-21'
-link: https://jolly-pixie-a75e48.netlify.app/
+link: https://sumorize.net
 tags:
   - React
   - Tailwind
