@@ -26,11 +26,8 @@ const HeroPhoto = ({ main }) =>
 
 const HeroAbout = ({ main }) => (
   <>
-    <div className="inline-flex items-center justify-center space-x-2 bg-accent py-2 px-4 text-accent-50">
-      <FiThumbsUp className="text-xl" />
-      <small className="font-bold">{main.slogan}</small>
-    </div>
-    <Sep size={12} />
+    
+  
     <Reveal
       animation="fade-in slide-in-bottom"
       className={classNames(

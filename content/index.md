@@ -1,46 +1,52 @@
 ---
-layout: Home-2
+layout: Home-4
 seo:
   title: Web Developer
   description: Custom description for this page goes here
 ---
 
-
-
 ---main
-images:
-  - src: /hero-2.png
-    alt: my photo
-  - src: /hero-mobile.jpg
-    alt: my photo
+slogan: Trusted By Fortune 500 Companies
 ---
 
-# <Typewriter>Mack Grissom</Typewriter>
+# *Mack Grissom*
 
-# *Web Developer* <span>&</span> *Consultant*
+## <Typewriter>Full-Stack Developer</Typewriter>
 
-I specialize in creating and managing websites for individuals and organizations. With a passion for web development and business growth, I have built a portfolio that showcases my technical expertise and my ability to help businesses achieve their goals. 
+##### <span>Design. Develop. Deliver.</span>
 
-```js {2-4} showLineNumbers
-const services = [
-  'UI/UX Design'
-  'Web Development'
-  'Mobile App Development'
-]
-if (have_a_project) navigate('/contact')
-```
+<Sep size={6} line className='max-w-sm mx-auto' />
+
+Welcome to my portfolio! I'm a dedicated full-stack developer specializing in crafting innovative web solutions. Let's collaborate and turn your vision into reality.
+
+
+
+---articles
+collection:
+  path: /blog
+  recordsPerPage: 6
+  limit: 6
+  sortBy: date
+  filterBy:
+    featured:
+      $eq: true
+---
+
+#### <span>Featured Articles</span>
+
+Read Insights and Opinions About Full Stack Development Below:
 
 
 
 ---achievements
 - number: 2+
   text: Years of experience
-- number: 20+
+- number: 30+
   text: Projects Completed
-- number: 10+
-  text: Clients World Wide
+- number: 20+
+  text: Clients
 - number: 100%
-  text: Customer Satisfaction
+  text: Client Satisfaction
 ---
 
 
@@ -48,26 +54,7 @@ if (have_a_project) navigate('/contact')
 ---cta
 ---
 <Button href="/contact" size="sm">
- Get Started
+  Get Started
 </Button>
 
-[Get in Touch](/contact)
-
-
-
----companies
-title:
-list:
-  - name: Company 1
-    icon:
-      src: /icons/logo-1.svg
-  - name: Company 2
-    icon:
-      src: /icons/logo-3.svg
-  - name: Company 3
-    icon:
-      src: /icons/logo-3.svg
-  - name: Company 4
-    icon:
-      src: /icons/logo-4.svg
 ---

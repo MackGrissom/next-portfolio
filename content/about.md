@@ -25,9 +25,9 @@ I am always eager to learn, grow, and take on new challenges, and I look forward
 
 I am passionate about programming, travelling, and hiking. I have been fortunate enough to travel to over 20 countries, experiencing different cultures and meeting new people along the way. Travelling has taught me to be open-minded, adaptable, and to think creatively, which I believe are valuable skills for a web developer who aims to build user friendly products.
 
-##### <span>03.</span> Framework Preferences
+##### <span>03.</span> Tech Preferences
 
-As a developer, I use React JS as a framework for building modern web applications for several reasons. First, React's component-based architecture allows me to break down complex user interfaces into smaller, reusable components, making it easier to manage and maintain my codebase. This approach also enables me to work on different parts of the application independently.
+As a developer, I use React & NextJS for building modern web applications for several reasons. First, React's component-based architecture allows me to break down complex user interfaces into smaller, reusable components, making it easier to manage and maintain my codebase. This approach also enables me to work on different parts of the application independently! It's also  allows for optimized SEO and much faster loading times. 
 
 Another reason I prefer React is its large community and ecosystem. There are many libraries and tools available to help me build better applications faster, including libraries for state management, routing, animation, and more. The strong documentation and support available also make it easy for me to get started and find answers to my questions.
 
@@ -40,7 +40,7 @@ Another reason I prefer React is its large community and ecosystem. There are ma
 Let's super-charge your business today!
 
 <Button href="/contact">
-  Get a Free Price Quote
+  Get a Free Quote
 </Button>
 
 
