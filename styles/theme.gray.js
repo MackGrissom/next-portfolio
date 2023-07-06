@@ -2,11 +2,11 @@ const colors = require('tailwindcss/colors')
 
 const theme = {
   // Primary color
-  alpha: colors.gray,
+  alpha: colors.indigo,
   // Secondary color
-  beta: colors.indigo,
+  beta: colors.gray,
   // Accent color
-  accent: colors.red,
+  accent: colors.indigo,
   // Neutral color
   omega: colors.zinc,
 }

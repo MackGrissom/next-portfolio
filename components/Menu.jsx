@@ -21,7 +21,7 @@ const MenuItem = ({ name, Icon, text, slug, number, isOpen, toggleMenu, ...rest 
   >
     <div
       className={classNames(
-        'absolute right-full top-0 h-full min-w-max px-4',
+        'absolute right-full top-0 h-full min-w-max px-4 hover:bg-indigo',
         'hidden items-center bg-accent text-sm font-medium text-white md:flex',
         'invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100'
       )}
@@ -49,7 +49,7 @@ const SocialLink = ({ url, name, Icon }) => (
     title={name}
   >
     {Icon && (
-      <Icon className="mx-auto h-12 w-6 text-white md:text-omega-500 md:group-hover:text-alpha" />
+      <Icon className="mx-auto h-12 w-6 text-white md:text-omega-500 md:group-hover:text-alpha hover:text-indigo" />
     )}
   </Link>
 )
