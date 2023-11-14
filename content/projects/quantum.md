@@ -2,7 +2,7 @@
 layout: Post
 title: Quantum
 description:  Mock-up Robotics/Manufacturing Website Built on Nextjs
-date: '2023-11-24'
+date: '2023-11-11'
 link: https://quantum-mackgrissom.vercel.app/
 tags:
   - Nextjs

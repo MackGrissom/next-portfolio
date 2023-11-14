@@ -24,7 +24,7 @@ const ProjectCardHorizontal = ({
     aria-label={title}
     className={classNames(
       'group grid items-center transition-all duration-200 md:grid-cols-2 md:gap-10',
-      'dark:bg-gradient-omega-900 prose prose-zinc bg-white dark:prose-invert dark:md:shadow-lg'
+      'dark:bg-gradient-omega-900 prose prose-zinc bg-white dark:prose-invert dark:md:shadow-lg shadow-[#6366F1]'
     )}
   >
    
@@ -80,9 +80,9 @@ const ProjectCardHorizontal = ({
       </Link>
       <small className="mt-6 block">{description}</small>
       <Button href={link}
-  className='mx-5 h-[20%] w-[50%]'> Site</Button>
+  className='mx-5 h-[20%] w-[20%]'>  Site</Button>
     <Button href={github}
-  className='mx-20 mt-5 h-[20%] w-[50%]'>Github </Button>
+  className='mx-20 mt-5 h-[20%] w-[20%]'>Github </Button>
       {tags && (
         <>
           <div className="mb-2 mt-6 font-bold dark:text-accent-400">Technologies</div>

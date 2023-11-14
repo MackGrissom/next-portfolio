@@ -6,7 +6,7 @@ import TipJar from '@/components/TipJar'
 
 const Layout = ({ projects, github }) => {
   return (
-    <div className="mx-auto p-3 md:p-6 lg:p-12"> 
+    <div className="mx-auto p-3 md:p-6 lg:p-12 pt-0"> 
       <div className="prose prose-headings:mb-4 dark:prose-invert">
         <h1 className='text-alpha'> Recent Projects </h1>
         <p className='text-beta'>A few projects that I'm excited to share with you. </p>
