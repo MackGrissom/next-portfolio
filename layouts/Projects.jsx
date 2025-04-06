@@ -1,41 +1,43 @@
-import ProjectCardHorizontal from '@/components/ProjectCardHorizontal'
-import RepositoryCard from '@/components/RepositoryCard'
-import ContentRenderer from '@/components/ContentRenderer'
-import Reveal from '@/components/Reveal'
-import TipJar from '@/components/TipJar'
+import { MDXRemote } from 'next-remote-mdx'
+import Link from 'next/link'
+import ProjectCardHorizontal from '../components/ProjectCardHorizontal'
+import Sep from '../components/Sep'
+import { getCollectionItems } from '../utils/mdx'
 
-const Layout = ({ projects, github }) => {
+export default function Projects({ projects, source, frontMatter }) {
   return (
-    <div className="mx-auto p-3 md:p-6 lg:p-12 pt-0"> 
-      <div className="prose prose-headings:mb-4 dark:prose-invert">
-        <h1 className='text-alpha'> Recent Projects </h1>
-        <p className='text-beta'>A few projects that I'm excited to share with you. </p>
+    <div className="mx-auto max-w-7xl pt-0 md:p-6 lg:p-12">
+      <div className="prose prose-zinc mx-auto dark:prose-invert">
+        <h1 className="text-alpha">Projects</h1>
+        <h2 className="text-beta">My Recent Work</h2>
         
-        {/* NDA Note */}
-        <p className='text-sm italic mb-6'>
-          <strong>Note:</strong> Many of my professional projects are under Non-Disclosure Agreements (NDAs) and cannot be publicly displayed. 
-          The projects showcased here represent a small portion of my work that is available for public viewing. 
-          If you'd like to discuss my experience with specific technologies or project types in more detail, please <a href="/contact">contact me</a>.
+        <p className="mb-6 text-sm italic">
+          Note: Many of my client projects are covered under Non-Disclosure
+          Agreements (NDAs) and cannot be publicly displayed. The projects showcased here represent
+          a small portion of my work that is available for public viewing. If you'd like to discuss
+          my experience with specific technologies or project types in more detail, please{' '}
+          <Link href="/contact">contact me</Link>.
         </p>
         
-        <ContentRenderer source={github} />
-        <div className="mt-4 grid grid-cols-fluid gap-4 [--tw-fluid-col-min:15rem] md:mt-12 md:gap-6">
-          {github?.repositories?.records?.map((item, i) => (
-            <Reveal animation="fade-in slide-in-top" delay={i * 100} key={item.name}>
-              <RepositoryCard {...item} />
-            </Reveal>
-          ))}
-        </div>
-      
-        <ContentRenderer source={projects} />
-        <div className="mt-4 grid gap-4 md:mt-12 md:gap-6">
-          {projects?.collection?.records?.map((item, i) => (
-            <ProjectCardHorizontal key={item.slug} index={i} {...item} />
-          ))}
-        </div>
+        <MDXRemote {...source} components={{}} />
+      </div>
+
+      <Sep line className="my-8 md:my-16" />
+
+      <div className="grid grid-cols-1 gap-12 md:gap-16">
+        {projects.map((project) => (
+          <ProjectCardHorizontal key={project.slug} {...project} />
+        ))}
       </div>
     </div>
   )
 }
 
-export default Layout
+export async function getStaticProps() {
+  const projects = await getCollectionItems('projects')
+  return {
+    props: {
+      projects,
+    },
+  }
+}
