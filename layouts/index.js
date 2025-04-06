@@ -8,6 +8,7 @@ const layouts = {
   Post: dynamic(() => import(`@/layouts/Post`)),
   Projects: dynamic(() => import(`@/layouts/Projects`)),
   Fallback: dynamic(() => import(`@/layouts/Fallback`)),
+  Blog: dynamic(() => import(`@/layouts/Blog`)),
 }
 
 export default layouts
