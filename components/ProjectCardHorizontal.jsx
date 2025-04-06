@@ -15,8 +15,7 @@ const ProjectCardHorizontal = ({
   description,
   attributes,
   index,
-  link,
-  github
+  link
 }) => (
   <div className="mb-10"> 
     <div
@@ -62,7 +61,7 @@ const ProjectCardHorizontal = ({
           )}
         </Link>
       )}
-      <div className="p-4 md:p-10 md:pl-0">
+      <div className="p-4 md:p-6 lg:p-8">
         {logo?.src ? (
           <div className="h-10">
             <Icon {...logo} className="h-full w-36 fill-current text-omega-400" />
@@ -76,8 +75,9 @@ const ProjectCardHorizontal = ({
           </h4>
         </Link>
         <small className="mt-6 block">{description}</small>
-        <Button href={link} className="mx-5 h-[20%] w-[20%]">Site</Button>
-        <Button href={github} className="mx-20 mt-5 h-[20%] w-[20%]">Github</Button>
+        {link && (
+          <Button href={link} className="mx-5 h-[20%] w-[20%]">Site</Button>
+        )}
         {tags && (
           <>
             <div className="mb-2 mt-6 font-bold dark:text-accent-400">Technologies</div>

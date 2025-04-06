@@ -1,11 +1,8 @@
 import ProjectCardHorizontal from '@/components/ProjectCardHorizontal'
-import RepositoryCard from '@/components/RepositoryCard'
 import ContentRenderer from '@/components/ContentRenderer'
-import Reveal from '@/components/Reveal'
-import TipJar from '@/components/TipJar'
 import Link from 'next/link'
 
-const Layout = ({ projects, github }) => {
+const Layout = ({ projects }) => {
   return (
     <div className="mx-auto max-w-7xl pt-0 md:p-6 lg:p-8">
       <div className="prose prose-zinc mx-auto dark:prose-invert">
@@ -27,15 +24,6 @@ const Layout = ({ projects, github }) => {
         <div className="mt-2 grid gap-4 md:mt-6 md:gap-6">
           {projects?.collection?.records?.map((item, i) => (
             <ProjectCardHorizontal key={item.slug} index={i} {...item} />
-          ))}
-        </div>
-
-        <ContentRenderer source={github} />
-        <div className="mt-2 grid grid-cols-fluid gap-4 [--tw-fluid-col-min:15rem] md:mt-6 md:gap-6">
-          {github?.repositories?.records?.map((item, i) => (
-            <Reveal animation="fade-in slide-in-top" delay={i * 100} key={item.name}>
-              <RepositoryCard {...item} />
-            </Reveal>
           ))}
         </div>
       </div>
