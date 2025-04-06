@@ -16,9 +16,26 @@ slogan: Trusted By Fortune 500 Companies
 ##### <span>Design. Develop. Deliver.</span>
 
 <Sep size={6} line className='max-w-sm mx-auto' />
-I'm a dedicated freelance web developer specializing in crafting innovative web solutions. Let's collaborate and turn your vision into reality.
+I'm a dedicated freelance web developer specializing in crafting innovative web solutions and AI integrations. Let's collaborate and turn your vision into reality.
 
-
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12 text-center">
+  <div>
+    <div className="text-white text-4xl font-bold">4+</div>
+    <div className="text-slate-300">Years of experience</div>
+  </div>
+  <div>
+    <div className="text-white text-4xl font-bold">50+</div>
+    <div className="text-slate-300">Projects Completed</div>
+  </div>
+  <div>
+    <div className="text-white text-4xl font-bold">40+</div>
+    <div className="text-slate-300">Clients</div>
+  </div>
+  <div>
+    <div className="text-white text-4xl font-bold">100%</div>
+    <div className="text-slate-300">Client Satisfaction</div>
+  </div>
+</div>
 
 ---articles
 collection:
@@ -35,25 +52,15 @@ collection:
 
 Read My Insights and Opinions About Full Stack Development Below:
 
-
-
----achievements
-- number: 2+
-  text: Years of experience
-- number: 30+
-  text: Projects Completed
-- number: 20+
-  text: Clients
-- number: 100%
-  text: Client Satisfaction
----
-
-
-
 ---cta
 ---
-<Button href="/contact" size="sm">
-  Get Started
-</Button>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+  <Button href="/contact" size="sm">
+    Get Started
+  </Button>
+  <Button href="/projects" size="sm" variant="outline">
+    See My Work
+  </Button>
+</div>
 
 ---

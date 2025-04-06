@@ -1,14 +1,16 @@
 const colors = require('tailwindcss/colors')
 
 const theme = {
-  // Primary color
-  alpha: colors.indigo,
-  // Secondary color
-  beta: colors.gray,
+  // Primary color - Teal
+  alpha: colors.teal,
+  // Secondary color - Amber (for contrast)
+  beta: colors.amber,
   // Accent color
-  accent: colors.indigo,
+  accent: colors.teal,
   // Neutral color
-  omega: colors.zinc,
+  omega: colors.slate, // Using slate instead of zinc for better contrast
+  // High contrast color for achievements
+  highlight: colors.white,
 }
 
 module.exports = theme

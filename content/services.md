@@ -1,11 +1,40 @@
 ---
 layout: Services
 seo:
-  title: Web Development Services
-  description: My web development services for clients seeking web redesign, new website 
+  title: Web Development Services - Mack Grissom
+  description: Professional web development services including custom websites, e-commerce solutions, and web applications
 ---
 
+# Services
 
+I offer end-to-end web development solutions tailored to your specific business needs.
+
+## Custom Website Development
+Modern, responsive websites built with the latest technologies to ensure optimal performance, accessibility, and user experience.
+
+## E-commerce Solutions
+Scalable online stores with secure payment processing, inventory management, and seamless customer experiences.
+
+## Web Applications
+Custom web applications that automate processes, manage data, and provide valuable tools for your business or customers.
+
+## Content Management Systems
+Tailored CMS solutions that make updating your website content simple and intuitive, even for non-technical users.
+
+## Performance Optimization
+Improve your existing website's speed, SEO, and user experience to boost conversions and engagement.
+
+## Technical Consultation
+Expert advice on technology choices, architecture decisions, and digital strategy to ensure your project's success.
+
+## AI Consultation & Integration
+I help businesses leverage artificial intelligence to enhance their products, automate workflows, and gain competitive advantages:
+
+    - <strong>AI Strategy Development</strong>
+    - <strong>Custom AI Solution Implementation</strong>
+    - <strong>LLM Integration (OpenAI, Anthropic)</strong>
+    - <strong>AI-Powered Automation</strong>
+    - <strong>Chatbot & Virtual Assistant Development</strong>
 
 ---main
 ---
@@ -43,8 +72,6 @@ Depending on your goals, I have a variety of offerings that will benefit your bu
   Get Free  Quote
 </Button>
 
-
-
 ---services[0]
 title: Web and Mobile App Design
 icon:
@@ -59,8 +86,6 @@ icon:
     - <strong>Web Design</strong>
 
 </small>
-
-
 
 ---services[3]
 title: Website Redesign
@@ -77,8 +102,6 @@ icon:
 
 </small>
 
-
-
 ---services[1]
 title: UI/UX Design & Optimization
 icon:
@@ -93,8 +116,6 @@ icon:
     - <strong>Attention to detail and commitment to delivering quality results</strong>
 </small>
 
-
-
 ---services[2]
 title: Website Audit & Debugging
 icon:
@@ -107,4 +128,20 @@ I offer comprehensive analysis and troubleshooting services to ensure your appli
   - <strong>Auditing </strong>
   - <strong>Debugging</strong>
   - <strong>Testing</strong>
+</small>
+
+---services[4]
+title: AI Consultation & Integration
+icon:
+  src: /icons/ai-consultation.svg
+---
+
+<small>
+  I help businesses leverage artificial intelligence to enhance their products, automate workflows, and gain competitive advantages:
+
+    - <strong>AI Strategy Development</strong>
+    - <strong>Custom AI Solution Implementation</strong>
+    - <strong>LLM Integration (OpenAI, Anthropic)</strong>
+    - <strong>AI-Powered Automation</strong>
+    - <strong>Chatbot & Virtual Assistant Development</strong>
 </small>

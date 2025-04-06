@@ -37,6 +37,8 @@ const ImageGallery = (props) => {
     portalRef.current && portalRef.current.focus()
   }, [activeIndex])
 
+  console.log("Images being rendered:", images);
+
   if (!images || !images.length) return null
 
   const thumbsToShow = images.length > 4 ? 3 : images.length

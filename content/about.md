@@ -5,8 +5,6 @@ seo:
   description: About a Web developer and growth consultant named mack
 ---
 
-
-
 ---personal_info
 name: Mack Grissom
 images:
@@ -15,7 +13,7 @@ images:
 ---
 ##### <span>01.</span> About me
 
-Hi there! My name is Mack, and I am a 28-year-old web developer who is passionate about providing a positive user experience and helping clients grow their businesses. 
+Hi there! My name is Mack, and I am a 30-year-old web developer who is passionate about providing a positive user experience and helping clients grow their businesses. 
 
 I have always been interested in technology and its potential to create meaningful change, and web development was a natural transition for me.
 
@@ -27,11 +25,9 @@ I am passionate about programming, travelling, and hiking. I have been fortunate
 
 ##### <span>03.</span> Tech Preferences
 
-As a developer, I use React & NextJS for building modern web applications for several reasons. First, React's component-based architecture allows me to break down complex user interfaces into smaller, reusable components, making it easier to manage and maintain my codebase. This approach also enables me to work on different parts of the application independently! It's also  allows for optimized SEO and much faster loading times. 
+As a developer, I use React & NextJS for building modern web applications for several reasons. First, React's component-based architecture allows me to break down complex user interfaces into smaller, reusable components, making it easier to manage and maintain my codebase. This approach also enables me to work on different parts of the application independently! It's also allows for optimized SEO and much faster loading times. 
 
 Another reason I prefer React is its large community and ecosystem. There are many libraries and tools available to help me build better applications faster, including libraries for state management, routing, animation, and more. The strong documentation and support available also make it easy for me to get started and find answers to my questions.
-
-
 
 ---cta
 ---
@@ -43,18 +39,12 @@ Let's super-charge your business today!
   Get a Free Quote
 </Button>
 
-
-
-
-
-
 ---skills[0]
 ########################################
 ### Skills
 ########################################
 title: Front-End UI/UX Design
 list:
- 
   - title: JavaScript
     icon:
       src: /icons/javascript.svg
@@ -75,31 +65,19 @@ list:
       src: /icons/figma.svg
 ---
 
-
-
-
-
 ---skills[1]
 title: Back-End Development
 list:
   - title: Node.js
-  
     icon:
       src: /icons/nodedotjs.svg
-
   - title: Ruby
-
     icon:
       src: /icons/ruby.svg
   - title: PostgreSQL
-
     icon:
       src: /icons/postgresql.svg
 ---
-
-
-
-
 
 ---history[0]
 title: Employment
@@ -115,13 +93,10 @@ list:
     date: 2018-2021
 ---
 
-
-
 ---history[1]
 title: Education
 list:
   - name: Le Wagon Bootcamp
     description: Full-Stack Web Development Diploma from the worlds highest rated Bootcamp.
     date: 2022
-
 ---

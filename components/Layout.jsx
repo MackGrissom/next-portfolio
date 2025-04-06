@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classNames from 'clsx'
 import Menu from '@/components/Menu'
 
-import fonts from '@/styles/fonts'
-
 const Layout = (props) => {
   const { children } = props
+  const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = React.useState({})
+
+  // Only include the fonts variable on the client side to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <div
       className={classNames(
         'dark relative flex min-h-screen w-full justify-center bg-black font-sans lg:px-4 xl:px-8',
-        theme,
-        ...fonts
+        theme
       )}
     >
      

@@ -12,8 +12,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
-        serif: ['var(--font-serif)', ...defaultTheme.fontFamily.serif],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-playfair)', ...defaultTheme.fontFamily.serif],
+        mono: ['var(--font-fira)', ...defaultTheme.fontFamily.mono],
       },
       typography: (theme) => {
         return {
@@ -130,6 +131,14 @@ module.exports = {
           '50%': { opacity: 0 },
         },
       },
+      colors: {
+        alpha: {
+          // This would be your primary/accent color
+        },
+        beta: {
+          // This would be your secondary color
+        }
+      }
     },
   },
   corePlugins: {

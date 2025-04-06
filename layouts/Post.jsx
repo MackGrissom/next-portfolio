@@ -32,7 +32,7 @@ const Layout = ({
         type="BlogPosting"
         url={pageUrl}
         title={title}
-        images={images.map((img) => siteUrl + img.src)}
+        images={images?.map((img) => img && img.src ? siteUrl + img.src : null).filter(Boolean)}
         datePublished={date}
         authorName={authorName}
         description={seo?.description || description}

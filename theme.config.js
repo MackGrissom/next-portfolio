@@ -1,4 +1,3 @@
-
 /**
  * Icons from react-icons: https://react-icons.github.io/react-icons
  */
@@ -110,13 +109,23 @@ export const mdxConfig = {
  */
 
 export const siteMetaData = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'http://localhost:3000',
-  authorName: 'Mack Grissom',
-  siteName: 'Mack Grissom',
-  defaultTitle: 'Mack Grissom Freelance Portfolio',
-  titleTemplate: 'Mack Grissom',
-  description: 'Mack grissom Freelance Web Developer',
-  email: 'mack@mackgrissom.io',
-  locale: 'en_US',
-
+  title: 'Mack Grissom | Full-Stack Web Developer',
+  author: 'Mack Grissom',
+  headerTitle: 'Mack Grissom',
+  description: 'Professional web developer specializing in Next.js, React, and modern web applications. Creating high-performance websites and applications for businesses worldwide.',
+  language: 'en-us',
+  theme: 'system',
+  siteUrl: 'https://www.mackgrissom.io', // Update with your actual URL
+  siteLogo: '/logo.png',
+  socialBanner: '/social-banner.png',
+  email: 'contact@mackgrissom.io',
+  github: 'https://github.com/yourusername',
+  linkedin: 'https://www.linkedin.com/in/yourusername',
+  locale: 'en-US',
+  analytics: {
+    googleAnalyticsId: '', // Add your GA ID
+  },
+  newsletter: {
+    provider: 'convertkit',
+  },
 }

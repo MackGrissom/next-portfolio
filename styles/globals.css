@@ -45,7 +45,7 @@
 
 @layer utilities {
   .text-gradient-500 {
-    @apply bg-gradient-to-br from-alpha to-beta bg-clip-text text-transparent;
+    @apply text-teal-400;
   }
   .bg-gradient-omega-900 {
     @apply bg-gradient-to-r from-omega-900 to-omega-800;
@@ -70,5 +70,64 @@ margin-bottom: 195px;
   width: -webkit-fill-available;
   left: 135px;
   border-radius: 163px;
+}
+
+:root {
+  --color-alpha-50: #f5f3ff;
+  --color-alpha-100: #ede9fe;
+  --color-alpha-200: #ddd6fe;
+  --color-alpha-300: #c4b5fd;
+  --color-alpha-400: #a78bfa;
+  --color-alpha-500: #8b5cf6;
+  --color-alpha-600: #7c3aed;
+  --color-alpha-700: #6d28d9;
+  --color-alpha-800: #5b21b6;
+  --color-alpha-900: #4c1d95;
+  
+  --color-beta-50: #fffbeb;
+  --color-beta-100: #fef3c7;
+  --color-beta-200: #fde68a;
+  --color-beta-300: #fcd34d;
+  --color-beta-400: #fbbf24;
+  --color-beta-500: #f59e0b;
+  --color-beta-600: #d97706;
+  --color-beta-700: #b45309;
+  --color-beta-800: #92400e;
+  --color-beta-900: #78350f;
+}
+
+.achievements-section h3,
+.achievements-section strong,
+[data-achievements] h3,
+[data-achievements] strong,
+[data-section="achievements"] h3,
+[data-section="achievements"] strong {
+  color: #14b8a6 !important; /* teal-500 */
+  font-weight: bold !important;
+  font-size: 2.5rem !important;
+  line-height: 1 !important;
+}
+
+.achievements-section p,
+.achievements-section span,
+[data-achievements] p,
+[data-achievements] span,
+[data-section="achievements"] p,
+[data-section="achievements"] span {
+  color: #e5e7eb !important; /* gray-200 */
+  font-size: 1rem !important;
+}
+
+.achievement-number {
+  color: #2dd4bf !important; /* teal-400 - brighter for better visibility */
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  display: block !important;
+}
+
+.achievement-text {
+  color: #f8fafc !important; /* slate-50 - very light for maximum contrast */
+  font-size: 1rem !important;
+  display: block !important;
 }
 
