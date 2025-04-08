@@ -59,11 +59,6 @@ export const social = [
     url: 'https://www.instagram.com/mackgrissom',
     Icon: IoLogoInstagram,
   },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/mackgrissom/',
-    Icon: IoLogoLinkedin,
-  },
 ]
 
 /**
@@ -118,9 +113,8 @@ export const siteMetaData = {
   siteUrl: 'https://www.mackgrissom.io', // Update with your actual URL
   siteLogo: '/logo.png',
   socialBanner: '/social-banner.png',
-  email: 'contact@mackgrissom.io',
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://www.linkedin.com/in/yourusername',
+  email: 'mack@mackgrissom.io',
+  github: 'https://github.com/mackgrissom',
   locale: 'en-US',
   analytics: {
     googleAnalyticsId: '', // Add your GA ID
