@@ -11,9 +11,9 @@ slogan: Trusted By Fortune 500 Companies
 
 # *Carl Hanson*
 
-## <Typewriter>Full-Stack Developer</Typewriter>
+## <Typewriter>Freelance Software Engineer</Typewriter>
 
-##### <span>Based in Munich</span>
+##### <span>Based in USA • Serving Clients Worldwide</span>
 
 <Sep size={6} line className='max-w-sm mx-auto' />
 

@@ -11,9 +11,9 @@ slogan: Trusted By Fortune 500 Companies
 
 # *Mack Grissom*
 
-## <Typewriter>Full-Stack Developer</Typewriter>
+## <Typewriter>Freelance Software Engineer</Typewriter>
 
-##### <span>Design. Develop. Deliver.</span>
+##### <span>Based in USA • Serving Clients Worldwide</span>
 
 <Sep size={6} line className='max-w-sm mx-auto' />
 I create custom websites and AI solutions that solve real business problems and deliver measurable results. Let's elevate your digital presence.

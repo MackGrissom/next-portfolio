@@ -14,7 +14,9 @@ images:
     alt: my photo
 ---
 
-## <Typewriter>Full-Stack Developer</Typewriter>
+## <Typewriter>Freelance Software Engineer</Typewriter>
+
+##### <span>Based in USA • Serving Clients Worldwide</span>
 
 <Sep size={6} />
 
