@@ -7,6 +7,8 @@ import BlogCardHorizontalMini from '@/components/BlogCardHorizontalMini'
 import Reveal from '@/components/Reveal'
 import Companies from '@/components/Companies'
 import { FiThumbsUp } from 'react-icons/fi'
+import Button from '@/components/Button'
+import { FiFileText, FiLinkedin } from 'react-icons/fi'
 
 const HeroPhoto = ({ main }) =>
   main.images?.[1] && (
@@ -81,6 +83,18 @@ const Layout = ({ main = {}, articles = {}, cta = {}, achievements = [], compani
       <div className="text-center">
         <HeroPhoto main={main} />
         <HeroAbout main={main} />
+        
+        <div className="flex gap-5 justify-center mt-6 mb-10">
+          <a href="/resume/Mack_grissom_Resume.pdf" className="px-5 py-2.5 text-sm font-medium inline-flex items-center gap-2 bg-gradient-to-r from-alpha-400 to-alpha-600 text-white rounded transition-all hover:from-alpha-500 hover:to-alpha-700 hover:scale-105" target="_blank" rel="noopener noreferrer">
+            <FiFileText className="w-4 h-4" />
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/mackgrissom/" className="px-5 py-2.5 text-sm font-medium inline-flex items-center gap-2 bg-[#0077B5] text-white rounded transition-all hover:bg-[#005885] hover:scale-105" target="_blank" rel="noopener noreferrer">
+            <FiLinkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
+        </div>
+        
         <Sep size={12} />
         <div className="prose prose-invert">
           <ContentRenderer source={cta} />

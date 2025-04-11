@@ -16,7 +16,7 @@ slogan: Trusted By Fortune 500 Companies
 ##### <span>Design. Develop. Deliver.</span>
 
 <Sep size={6} line className='max-w-sm mx-auto' />
-I'm a dedicated freelance web developer specializing in crafting innovative web solutions and AI integrations. Let's collaborate and turn your vision into reality.
+I create custom websites and AI solutions that solve real business problems and deliver measurable results. Let's elevate your digital presence.
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12 text-center">
   <div>
