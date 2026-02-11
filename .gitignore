@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# old portfolio (temp reference)
+/temp-old-portfolio
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

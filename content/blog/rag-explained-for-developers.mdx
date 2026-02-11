@@ -1,0 +1,62 @@
+---
+title: "RAG Explained: How to Make AI Actually Useful With Your Data"
+description: Retrieval Augmented Generation is the key to building AI features that are accurate and grounded in your business data. Here's how it works.
+date: "2026-01-20"
+tags: ["AI", "RAG", "Development", "Tutorial"]
+featured: true
+---
+
+The biggest complaint about AI in business? "It makes stuff up." That's because most implementations are using LLMs without grounding them in real data. RAG (Retrieval Augmented Generation) fixes this — and it's easier to implement than you think.
+
+## The Problem With Vanilla LLMs
+
+When you ask ChatGPT about your company's return policy, it doesn't know. It'll either refuse to answer or, worse, confidently hallucinate one. This is why naive AI integrations feel useless — the model doesn't have your data.
+
+## How RAG Works
+
+RAG is elegantly simple:
+
+1. **Chunk your data** — Break your documents, knowledge base, or database into small, meaningful pieces
+2. **Create embeddings** — Convert each chunk into a vector (a mathematical representation of meaning)
+3. **Store in a vector database** — Index these embeddings for fast retrieval
+4. **At query time** — Convert the user's question into a vector, find the most relevant chunks, and include them in the LLM prompt
+5. **Generate a grounded response** — The LLM answers based on your actual data, not its training data
+
+## A Real-World Implementation
+
+Here's a simplified architecture I use for client projects:
+
+```
+User Question
+  → Generate embedding (OpenAI text-embedding-3-small)
+  → Vector similarity search (Supabase pgvector)
+  → Retrieve top 5 relevant chunks
+  → Construct prompt: System instructions + Retrieved context + User question
+  → Send to Claude for response generation
+  → Stream response to frontend
+```
+
+## Key Decisions
+
+### Chunk Size
+Too small and you lose context. Too large and you dilute relevance. I typically use 500-1000 tokens with 100-token overlap between chunks.
+
+### Embedding Model
+OpenAI's text-embedding-3-small is the sweet spot for most use cases — fast, cheap, and accurate enough. Only upgrade to the large model if search quality is critical.
+
+### Vector Database
+For most projects, **Supabase pgvector** is my default — it's free to start, runs alongside your existing Postgres data, and requires zero additional infrastructure. Pinecone or Weaviate for larger-scale needs.
+
+### Retrieval Count
+Start with 3-5 chunks. More context helps accuracy but increases token costs and can confuse the model if chunks are contradictory. Test and measure.
+
+## Common Pitfalls
+
+- **Stale data** — Set up a pipeline to re-index when your source data changes
+- **Poor chunking** — Don't split mid-sentence. Respect document structure (headings, paragraphs)
+- **No evaluation** — Build a test set of questions with known-good answers and measure retrieval accuracy
+- **Ignoring metadata** — Filter by category, date, or user permissions before doing similarity search
+
+## The Result
+
+A well-implemented RAG system turns a generic AI chatbot into a domain expert that actually knows your business. Customers get accurate answers, support teams handle fewer tickets, and your AI feature goes from "cute demo" to "can't live without it."
