@@ -91,23 +91,14 @@ export function SelectedWork() {
             ({featuredProjects.length})
           </span>
         </div>
-      </div>
 
-      {/* Project rows */}
-      <div className="border-t border-border">
-        {featuredProjects.map((project, i) => (
-          <ProjectItem key={project.slug} project={project} index={i} />
-        ))}
-      </div>
-
-      {/* NDA Notice */}
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10">
+        {/* NDA Notice */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 flex items-start gap-4 rounded-2xl border border-border bg-white/[0.02] p-6 md:items-center md:p-8"
+          className="mb-16 flex items-start gap-4 rounded-2xl border border-border bg-white/[0.02] p-5 md:items-center md:p-6"
         >
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -119,6 +110,13 @@ export function SelectedWork() {
             </p>
           </div>
         </motion.div>
+      </div>
+
+      {/* Project rows */}
+      <div className="border-t border-border">
+        {featuredProjects.map((project, i) => (
+          <ProjectItem key={project.slug} project={project} index={i} />
+        ))}
       </div>
     </section>
   );
