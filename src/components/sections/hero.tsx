@@ -41,7 +41,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-6 flex items-center gap-4"
+            className="mb-6 flex items-center gap-2 md:gap-4"
           >
             <div className="h-[1px] w-12 bg-accent" />
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-text-secondary">
@@ -50,7 +50,7 @@ export function Hero() {
           </motion.div>
 
           {/* Giant name */}
-          <h1 className="text-[clamp(3rem,12vw,12rem)] font-bold leading-[0.85] tracking-[-0.04em]">
+          <h1 className="text-[clamp(2.5rem,10vw,12rem)] font-bold leading-[0.85] tracking-[-0.04em]">
             <CharReveal delay={0.4}>MACK</CharReveal>
             <br />
             <span className="text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.3)]">
@@ -63,7 +63,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-12 flex flex-col gap-6 border-t border-border pt-8 md:flex-row md:items-end md:justify-between"
+            className="mt-8 flex flex-col gap-6 border-t border-border pt-6 md:mt-12 md:flex-row md:items-end md:justify-between md:pt-8"
           >
             <p className="max-w-md text-sm leading-relaxed text-text-secondary md:text-base">
               I build premium digital experiences and AI solutions that

@@ -21,7 +21,7 @@ export function About() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
-    <section id="about" ref={containerRef} className="relative overflow-hidden py-32 md:py-48">
+    <section id="about" ref={containerRef} className="relative overflow-hidden py-20 md:py-32 lg:py-48">
       {/* Large background text */}
       <motion.div
         style={{ y: bgY }}
@@ -33,13 +33,13 @@ export function About() {
       </motion.div>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="grid gap-16 md:grid-cols-12 md:gap-8">
+        <div className="grid gap-10 md:grid-cols-12 md:gap-8">
           {/* Left column */}
           <div className="md:col-span-4">
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.3em] text-text-tertiary">
               About
             </span>
-            <h2 className="text-4xl font-bold tracking-tighter md:text-5xl">
+            <h2 className="text-2xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
               <TextReveal>Building the future of web.</TextReveal>
             </h2>
 
@@ -61,7 +61,7 @@ export function About() {
           {/* Right column */}
           <div className="md:col-span-7 md:col-start-6">
             <div className="space-y-12 pt-0 md:pt-24">
-              <ScrollRevealParagraph className="text-2xl font-medium leading-relaxed tracking-tight md:text-3xl lg:text-4xl">
+              <ScrollRevealParagraph className="text-lg font-medium leading-relaxed tracking-tight md:text-2xl lg:text-3xl">
                 I&apos;m Mack, a full-stack developer and AI consultant who partners with forward-thinking companies to build products that matter.
               </ScrollRevealParagraph>
 
@@ -76,17 +76,17 @@ export function About() {
 
               {/* Stats */}
               <FadeIn delay={0.3}>
-                <div className="grid grid-cols-3 gap-8 border-t border-border pt-8">
+                <div className="grid grid-cols-3 gap-4 border-t border-border pt-8 md:gap-8">
                   <div>
-                    <p className="text-4xl font-bold tracking-tighter text-accent md:text-5xl">50+</p>
+                    <p className="text-2xl font-bold tracking-tighter text-accent md:text-4xl lg:text-5xl">50+</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.2em] text-text-tertiary">Projects</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold tracking-tighter text-accent md:text-5xl">40+</p>
+                    <p className="text-2xl font-bold tracking-tighter text-accent md:text-4xl lg:text-5xl">40+</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.2em] text-text-tertiary">Clients</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold tracking-tighter text-accent md:text-5xl">4+</p>
+                    <p className="text-2xl font-bold tracking-tighter text-accent md:text-4xl lg:text-5xl">4+</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.2em] text-text-tertiary">Years</p>
                   </div>
                 </div>

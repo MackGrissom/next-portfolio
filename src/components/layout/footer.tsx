@@ -30,7 +30,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Mack Grissom. All rights reserved.
           </motion.p>
 
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 md:gap-8">
             {[
               { label: "GitHub", href: "https://github.com/MackGrissom" },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/mackgrissom/" },

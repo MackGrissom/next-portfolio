@@ -19,10 +19,10 @@ export default function BlogPage() {
       <div className="px-6 pt-32 pb-16 md:pt-40">
         <div className="mx-auto max-w-3xl">
           <FadeIn>
-            <h1 className="mb-4 text-4xl font-bold tracking-tighter md:text-5xl">
+            <h1 className="mb-4 text-2xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
               Blog
             </h1>
-            <p className="mb-12 text-lg text-text-secondary">
+            <p className="mb-12 text-base text-text-secondary md:text-lg">
               Thoughts on AI, web development, and building modern software.
             </p>
           </FadeIn>

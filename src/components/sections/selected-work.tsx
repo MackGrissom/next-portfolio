@@ -39,20 +39,20 @@ function ProjectItem({ project, index }: { project: ProjectRow; index: number })
       transition={{ duration: 0.6, delay: index * 0.05 }}
     >
       <Link href={`/work/${project.slug}`} className="group block">
-        <div className="border-b border-border py-8 transition-colors duration-300 md:py-10">
-          <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-6 md:flex-row md:items-center md:px-10">
+        <div className="border-b border-border py-5 transition-colors duration-300 md:py-10">
+          <div className="mx-auto flex max-w-[1400px] flex-row items-center gap-3 px-6 md:gap-4 md:px-10">
             {/* Number */}
             <span className="w-12 shrink-0 text-xs font-medium text-text-tertiary">
               {String(index + 1).padStart(2, "0")}
             </span>
 
             {/* Title */}
-            <h3 className="flex-1 text-2xl font-bold tracking-tight transition-all duration-500 group-hover:translate-x-3 group-hover:text-accent md:text-4xl lg:text-5xl">
+            <h3 className="flex-1 text-xl font-bold tracking-tight transition-all duration-500 group-hover:translate-x-3 group-hover:text-accent md:text-3xl lg:text-5xl">
               {project.title}
             </h3>
 
             {/* Category */}
-            <span className="shrink-0 text-sm text-text-secondary transition-opacity group-hover:opacity-100 md:opacity-50">
+            <span className="hidden shrink-0 text-sm text-text-secondary transition-opacity group-hover:opacity-100 md:block md:opacity-50">
               {project.category}
             </span>
 
@@ -83,7 +83,7 @@ export function SelectedWork() {
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.3em] text-text-tertiary">
               Selected Work
             </span>
-            <h2 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
+            <h2 className="text-2xl font-bold tracking-tighter md:text-4xl lg:text-6xl">
               <TextReveal>Featured Projects</TextReveal>
             </h2>
           </div>

@@ -19,22 +19,22 @@ export function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" ref={ref} className="relative overflow-hidden py-32 md:py-48">
+    <section id="contact" ref={ref} className="relative overflow-hidden py-20 md:py-32 lg:py-48">
       {/* Giant background CTA */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <span className="select-none text-[15vw] font-bold uppercase leading-none tracking-tighter text-white/[0.02]">
+        <span className="select-none text-[20vw] font-bold uppercase leading-none tracking-tighter text-white/[0.02] md:text-[15vw]">
           Let&apos;s Talk
         </span>
       </div>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="grid gap-16 md:grid-cols-2">
+        <div className="grid gap-10 md:gap-16 md:grid-cols-2">
           {/* Left */}
           <div>
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.3em] text-text-tertiary">
               Contact
             </span>
-            <h2 className="mb-8 text-5xl font-bold tracking-tighter md:text-6xl lg:text-7xl">
+            <h2 className="mb-8 text-3xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
               <CharReveal>Let&apos;s work</CharReveal>
               <br />
               <span className="text-accent">
@@ -69,7 +69,7 @@ export function Contact() {
                         <span className="block text-[10px] font-medium uppercase tracking-[0.3em] text-text-tertiary">
                           {link.label}
                         </span>
-                        <span className="mt-1 block text-sm font-medium text-text-secondary transition-colors group-hover:text-text-primary">
+                        <span className="mt-1 block truncate text-xs font-medium text-text-secondary transition-colors group-hover:text-text-primary md:text-sm">
                           {link.value}
                         </span>
                       </div>

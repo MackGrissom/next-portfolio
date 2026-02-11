@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: Props) {
           {/* Header */}
           <FadeIn delay={0.1}>
             <header className="mb-12">
-              <h1 className="mb-4 text-4xl font-bold tracking-tighter md:text-5xl">
+              <h1 className="mb-4 text-2xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
                 {meta.title}
               </h1>
               <p className="mb-6 text-lg text-text-secondary">

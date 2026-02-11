@@ -23,10 +23,10 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.215, 0.61, 0.355, 1] }}
-      className="group border-b border-border py-10 transition-colors hover:bg-white/[0.02] md:border-b-0 md:border-r md:p-10 md:last:border-r-0"
+      className="group border-b border-border px-6 py-6 transition-colors hover:bg-white/[0.02] md:border-b-0 md:border-r md:p-10 md:last:border-r-0"
     >
       <span className="mb-6 block text-xs font-medium text-accent">{service.num}</span>
-      <h3 className="mb-4 whitespace-pre-line text-xl font-bold tracking-tight md:text-2xl">
+      <h3 className="mb-4 text-lg font-bold tracking-tight md:whitespace-pre-line md:text-xl lg:text-2xl">
         {service.title}
       </h3>
       <p className="text-sm leading-relaxed text-text-secondary">{service.description}</p>
@@ -36,14 +36,14 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
 export function Services() {
   return (
-    <section id="services" className="py-32 md:py-48">
+    <section id="services" className="py-20 md:py-32 lg:py-48">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.3em] text-text-tertiary">
               Services
             </span>
-            <h2 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
+            <h2 className="text-2xl font-bold tracking-tighter md:text-4xl lg:text-6xl">
               <TextReveal>What I do</TextReveal>
             </h2>
           </div>

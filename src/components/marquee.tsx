@@ -24,7 +24,7 @@ export function Marquee({
     .map((_, i) => (
       <span key={i} className="whitespace-nowrap">
         {text}
-        <span className="mx-8 text-text-tertiary">{separator}</span>
+        <span className="mx-4 text-text-tertiary md:mx-8">{separator}</span>
       </span>
     ));
 
@@ -36,7 +36,7 @@ export function Marquee({
       transition={{ duration: 0.8 }}
       className={`overflow-hidden border-y border-border py-6 ${className}`}
     >
-      <div className="animate-marquee flex text-4xl font-bold uppercase tracking-tighter text-text-primary/10 md:text-6xl lg:text-8xl">
+      <div className="animate-marquee flex text-2xl font-bold uppercase tracking-tighter text-text-primary/10 md:text-4xl lg:text-6xl">
         {repeated}
         {repeated}
       </div>

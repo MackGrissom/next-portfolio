@@ -99,16 +99,16 @@ export function Header() {
           {/* Mobile burger */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="relative z-[60] flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+            className="relative z-[60] flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
             aria-label="Menu"
           >
             <motion.span
-              animate={isMobileOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
-              className="block h-[1px] w-5 bg-white"
+              animate={isMobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              className="block h-[2px] w-5 bg-white"
             />
             <motion.span
-              animate={isMobileOpen ? { rotate: -45, y: -3 } : { rotate: 0, y: 0 }}
-              className="block h-[1px] w-5 bg-white"
+              animate={isMobileOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+              className="block h-[2px] w-5 bg-white"
             />
           </button>
         </div>
@@ -135,7 +135,7 @@ export function Header() {
                 {item.href.startsWith("#") ? (
                   <button
                     onClick={() => handleNavClick(item.href)}
-                    className="block py-3 text-4xl font-bold uppercase tracking-tight text-text-primary transition-colors hover:text-accent"
+                    className="block py-3 text-3xl font-bold uppercase tracking-tight text-text-primary transition-colors hover:text-accent md:text-4xl"
                   >
                     {item.label}
                   </button>
@@ -143,7 +143,7 @@ export function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className="block py-3 text-4xl font-bold uppercase tracking-tight text-text-primary transition-colors hover:text-accent"
+                    className="block py-3 text-3xl font-bold uppercase tracking-tight text-text-primary transition-colors hover:text-accent md:text-4xl"
                   >
                     {item.label}
                   </Link>
