@@ -1,0 +1,87 @@
+---
+title: "How to Actually Get the Most Out of OpenClaw"
+description: Practical tips for using OpenClaw effectively in your business, including how Jason Calacanis built an AI workforce that replicates his team's skills from historical data.
+date: "2026-02-11"
+tags: ["AI", "Agents", "OpenClaw", "Productivity"]
+featured: true
+---
+
+OpenClaw is everywhere right now. 145,000+ GitHub stars, trending on every tech podcast, and half the people I follow on LinkedIn are posting about it. But most people are barely scratching the surface. They install it, connect it to WhatsApp, ask it to set a reminder, and then wonder what the hype is about.
+
+The real power shows up when you treat OpenClaw like an employee, not a chatbot. And nobody is demonstrating this better than Jason Calacanis.
+
+## What Calacanis Is Doing (And Why It Matters)
+
+On a recent episode of This Week in Startups, Calacanis revealed a project his team built internally called **OpenClaw Ultron**. The concept is wild but practical: they gave OpenClaw agents (which they call "digital Replicants") access to all of their company systems and let them loose to see how much of the team's actual jobs they could handle.
+
+Here's how it works. Ultron uses APIs to pull every message from Slack, every document from Notion, and every email from Gmail into a central OpenClaw agent. The result is what Calacanis calls a **"canonical employee"** that has the context of the entire organization.
+
+That's the key insight. OpenClaw isn't just doing generic tasks. It's learning *how the team actually works* based on historical data of what they do day to day. Guest booking patterns, production workflows, research processes, editorial decisions. All of it feeds the agent.
+
+His producer Oliver estimated that **60% of his production work could be automated within 30 days**. The system already handles guest booking, guest ranking, production scheduling, ticker digests, and news monitoring. It even built its own control panel and dashboard to manage all of this.
+
+Calacanis put it bluntly: the top two people at his company who are heavily using these tools are worth "200 of the other employees."
+
+## The Mindset Shift Most People Miss
+
+The most common mistake with OpenClaw is treating it like a single super-intelligent chatbot that should handle everything at once. That leads to endless follow-up questions, permission loops, silent failures, and burned API quotas.
+
+The people getting real value out of OpenClaw are doing something different. They're building **specialized agents for specific jobs**, not one agent for everything.
+
+Bhanu Teja P, a solo founder running SiteGPT ($13K MRR), built what he calls "Mission Control" to manage a swarm of OpenClaw agents doing his marketing. Each agent has a specific role: content research, SEO optimization, social media posting, competitor monitoring. One person doing the marketing work of an entire team.
+
+That's the pattern. Don't ask OpenClaw to be your everything assistant. Give it a specific role with a specific scope.
+
+## Practical Tips That Actually Help
+
+### 1. Start With Your Most Repetitive Workflow
+
+Look at what eats up your time every single week. Email triage, meeting prep, report generation, social media scheduling. Pick one. OpenClaw can scan inboxes twice a day, categorize by urgency, and send you a summary. People report cutting inbox management from 30 minutes to 5.
+
+### 2. Use Skills From ClawHub (But Be Careful)
+
+ClawHub has 5,700+ community-built skills as of this week. There are skills for Notion, Trello, GitHub, Shopify, Slack, Gmail, and basically every tool you already use. Before installing anything, check the VirusTotal report on the skill page. OpenClaw recently partnered with VirusTotal specifically because malicious skills were becoming a problem. Over 230 flagged so far.
+
+### 3. Keep a Cheap Model as the Coordinator
+
+Don't burn your Claude or GPT-4 quota on routing and scheduling. Use a smaller model as the coordinator that decides which agent handles what, and only call the expensive models for the tasks that actually require deep reasoning. This keeps costs manageable.
+
+### 4. Git-Track Your Configuration
+
+Your `openclaw.json` config is the brain of your setup. Git-track it. When a config change breaks something (and it will), you want rollback capability. Run `openclaw doctor --fix` after any config change to validate against the current schema.
+
+### 5. Don't Expose Port 18789 to the Public Internet
+
+This is the single most important security tip. Bind the OpenClaw gateway to localhost and keep it there. A critical RCE vulnerability (CVE-2026-25253, CVSS 8.8) was disclosed on January 30th. If your agent is exposed to the internet, you're asking for trouble.
+
+### 6. Edit SOUL.md and HEARTBEAT.md
+
+Most people don't know about these files. `SOUL.md` controls your agent's personality and instructions. `HEARTBEAT.md` controls its check-in schedule and proactive behaviors. This is where you customize OpenClaw from a generic assistant into something that actually fits your workflow.
+
+## The Calacanis Playbook (Simplified)
+
+You don't need a whole engineering team to do a lighter version of what Calacanis built. Here's the approach:
+
+1. **Audit what your team actually does.** Look at Slack messages, emails, and project management tools from the last 90 days. What tasks repeat weekly? What takes the most time? That's your automation target.
+
+2. **Connect OpenClaw to your existing tools.** Slack, Notion, Gmail, your calendar. Don't start by building custom skills. Start by giving OpenClaw access to the data it needs to understand how your team works.
+
+3. **Build role-specific agents.** One for research, one for scheduling, one for content, one for monitoring. Each agent gets a clear SOUL.md with its role, responsibilities, and boundaries.
+
+4. **Let it learn from historical patterns.** The real magic happens when the agent has enough context from past behavior to start anticipating what needs to happen next. Guest booking patterns, content calendars, client communication cadences. All of this gets better over time.
+
+5. **Keep humans in the loop.** Calacanis isn't firing his team. He's making them dramatically more productive. The agents handle the repetitive execution. Humans handle judgment calls, strategy, and quality control.
+
+## The Security Reality
+
+I have to be straight about this: OpenClaw is powerful *because* it has access to your systems. That same access is what makes it risky. Rahul Sood, who appeared on TWIST alongside the Ultron demo, made the point clearly: "actually doing things" means "can execute arbitrary commands on your computer."
+
+His recommendation (and mine): deploy agents in a low-risk manner. Keep them isolated. Don't give a single agent the keys to everything. Segment access based on what each agent actually needs. Rotate your tokens regularly. And for the love of everything, keep it updated. The security patches are coming fast because the vulnerabilities are being discovered fast.
+
+## Where This Goes From Here
+
+We're in the very early days of figuring out how AI agents fit into business operations. Calacanis is running one of the most aggressive experiments I've seen, and the results are genuinely impressive. But even smaller implementations can save teams 10-20 hours a week if you're thoughtful about what you automate.
+
+The companies that will pull ahead aren't the ones with the biggest AI budgets. They're the ones that take the time to map their workflows, build focused agents, and iterate based on real results.
+
+If you're thinking about how to bring this into your business and want help figuring out where to start, that's exactly what I do. Reach out.
