@@ -23,9 +23,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = getProjectBySlug(slug);
   if (!result) return {};
 
+  const url = `https://www.mackgrissom.io/work/${slug}`;
+
   return {
     title: `${result.meta.title} | Mack Grissom`,
     description: result.meta.description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${result.meta.title} | Mack Grissom`,
+      description: result.meta.description,
+      url,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: result.meta.title,
+      description: result.meta.description,
+    },
   };
 }
 

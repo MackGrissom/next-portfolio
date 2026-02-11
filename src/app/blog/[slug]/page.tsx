@@ -22,10 +22,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = getBlogPostBySlug(slug);
   if (!result) return {};
 
+  const url = `https://www.mackgrissom.io/blog/${slug}`;
+
   return {
-    title: `${result.meta.title} | Mack Grissom`,
+    title: result.meta.title,
     description: result.meta.description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: result.meta.title,
+      description: result.meta.description,
+      url,
+      type: "article",
+      publishedTime: result.meta.date,
+      authors: ["Mack Grissom"],
+      tags: result.meta.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: result.meta.title,
+      description: result.meta.description,
+    },
   };
+}
+
+function ArticleJsonLd({ meta, slug }: { meta: { title: string; description: string; date: string; tags: string[] }; slug: string }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: meta.title,
+    description: meta.description,
+    datePublished: meta.date,
+    author: {
+      "@type": "Person",
+      name: "Mack Grissom",
+      url: "https://www.mackgrissom.io",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Mack Grissom",
+      url: "https://www.mackgrissom.io",
+    },
+    url: `https://www.mackgrissom.io/blog/${slug}`,
+    keywords: meta.tags.join(", "),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -38,6 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <PageTransition>
+      <ArticleJsonLd meta={meta} slug={slug} />
       <article className="px-6 pt-32 pb-16 md:pt-40">
         <div className="mx-auto max-w-3xl">
           {/* Back link */}
@@ -58,7 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {meta.title}
               </h1>
               <div className="flex flex-wrap items-center gap-3 text-sm text-text-tertiary">
-                <time>
+                <time dateTime={meta.date}>
                   {new Date(meta.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",

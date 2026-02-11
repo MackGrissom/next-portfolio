@@ -6,9 +6,19 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { PageTransition } from "@/components/animation/page-transition";
 
 export const metadata: Metadata = {
-  title: "Blog | Mack Grissom",
+  title: "Blog",
   description:
-    "Thoughts on AI, web development, and building modern software products.",
+    "Thoughts on AI, web development, and building modern software products by Mack Grissom.",
+  alternates: {
+    canonical: "https://www.mackgrissom.io/blog",
+  },
+  openGraph: {
+    title: "Blog | Mack Grissom",
+    description:
+      "Thoughts on AI, web development, and building modern software products.",
+    url: "https://www.mackgrissom.io/blog",
+    type: "website",
+  },
 };
 
 export default function BlogPage() {
