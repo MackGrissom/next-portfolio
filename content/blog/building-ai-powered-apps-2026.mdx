@@ -6,11 +6,11 @@ tags: ["AI", "Development", "Tutorial"]
 featured: true
 ---
 
-Every client I talk to wants AI in their product. The difference between a gimmick and a game-changer comes down to implementation. Here's how I approach building AI-powered features in production apps.
+Every client I talk to wants AI in their product. The difference between a gimmick and something users actually love comes down to how you build it. Here's the approach I take on production projects.
 
 ## The Modern AI Stack
 
-The tooling has matured significantly. Here's what I'm using in production today:
+The tooling has gotten really good. Here's what I'm running in production today:
 
 - **LLM Provider**: Anthropic Claude or OpenAI GPT-4o for reasoning tasks
 - **Embeddings**: OpenAI text-embedding-3-small for semantic search
@@ -20,28 +20,28 @@ The tooling has matured significantly. Here's what I'm using in production today
 
 ## Pattern 1: Conversational Interfaces
 
-The most requested feature. But a good AI chat isn't just calling an API — it requires:
+This is the most requested feature by far. But a good AI chat isn't just an API call. You need:
 
-- **Context management** — Maintaining conversation history without blowing token limits
-- **RAG (Retrieval Augmented Generation)** — Grounding responses in your actual data
-- **Streaming** — Showing responses token-by-token for perceived speed
-- **Guardrails** — Preventing hallucinations and keeping responses on-topic
+- **Context management**: Keeping conversation history without blowing token limits
+- **RAG (Retrieval Augmented Generation)**: Grounding responses in your actual data so the AI doesn't make things up
+- **Streaming**: Showing responses token-by-token so the UI feels fast
+- **Guardrails**: Keeping responses on-topic and preventing hallucinations
 
 ## Pattern 2: Intelligent Search
 
-Traditional keyword search is dead for many use cases. Semantic search with embeddings lets users find content by meaning, not just matching words. I've implemented this for e-commerce product discovery, documentation search, and internal knowledge bases.
+Traditional keyword search feels broken once you've used semantic search. Embeddings let users find content by *meaning*, not just matching words. I've built this for e-commerce product discovery, documentation search, and internal knowledge bases. The improvement in search quality is night and day.
 
 ## Pattern 3: Content Generation
 
-From email drafts to product descriptions to report summaries — AI content generation saves hours of manual work. The key is building in human review workflows so AI assists rather than replaces judgment.
+Email drafts, product descriptions, report summaries. AI content generation saves hours of manual work every week. The key is building in human review workflows. AI assists, humans approve.
 
-## Common Mistakes to Avoid
+## Mistakes I See Over and Over
 
-1. **Over-relying on a single model** — Always have a fallback provider
-2. **Ignoring costs** — Token usage adds up fast. Cache aggressively and use smaller models where possible
-3. **Skipping evaluation** — You need metrics to know if your AI feature is actually helping users
-4. **No rate limiting** — Protect your API keys and budget with proper throttling
+1. **Relying on a single model**: Always have a fallback provider. Outages happen.
+2. **Ignoring costs**: Token usage adds up fast. Cache aggressively and use smaller models where you can.
+3. **Skipping evaluation**: If you're not measuring whether your AI feature is actually helping users, you're guessing.
+4. **No rate limiting**: Protect your API keys and budget with proper throttling from day one.
 
-## Getting Started
+## Where to Start
 
-Start small. Pick one feature in your app that would benefit from AI — search, summarization, or recommendations are great entry points. Build a prototype, measure the impact, then expand. The worst approach is trying to "AI everything" at once.
+Pick one feature in your app that would benefit from AI. Search, summarization, or recommendations are great entry points. Build a prototype, measure the impact, then expand. The worst thing you can do is try to "AI everything" at once.
