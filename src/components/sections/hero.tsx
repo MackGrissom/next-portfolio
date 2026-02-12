@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { CharReveal } from "@/components/animation/text-reveal";
 import { Magnetic } from "@/components/animation/magnetic";
+import { AsciiPlasma } from "@/components/ascii-plasma";
 
 export function Hero() {
   const containerRef = useRef(null);
@@ -91,16 +92,14 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Floating year badge */}
+      {/* ASCII Plasma animation */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute right-6 top-1/2 hidden -translate-y-1/2 md:block md:right-10"
+        animate={{ opacity: 0.4 }}
+        transition={{ delay: 1.5, duration: 1.5 }}
+        className="pointer-events-none absolute right-6 top-1/2 hidden -translate-y-1/2 select-none overflow-hidden md:block md:right-10"
       >
-        <span className="text-xs font-medium uppercase tracking-[0.3em] text-text-tertiary [writing-mode:vertical-lr]">
-          &copy; 2024 — Portfolio
-        </span>
+        <AsciiPlasma color="#c8ff00" size={10} width={40} height={20} />
       </motion.div>
     </section>
   );

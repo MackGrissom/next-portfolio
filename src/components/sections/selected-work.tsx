@@ -15,6 +15,7 @@ type ProjectRow = {
 };
 
 const featuredProjects: ProjectRow[] = [
+  { slug: "ascii-hub", title: "ASCII Hub", category: "Animation Library", year: "2026", tags: ["React", "Vite", "Animation"] },
   { slug: "executive-leaderboard", title: "Executive Leaderboard", category: "Full-Stack Platform", year: "2024", tags: ["Next.js", "Supabase", "Stripe"] },
   { slug: "soulpunx", title: "SoulPunx", category: "Record Label Website", year: "2024", tags: ["Next.js", "Sanity CMS", "React"] },
   { slug: "tutorboost", title: "TutorBoost", category: "EdTech Platform", year: "2024", tags: ["React", "Node.js", "Education"] },
