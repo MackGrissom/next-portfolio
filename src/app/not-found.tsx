@@ -5,12 +5,12 @@ import { AsciiPlasma } from "@/components/ascii-plasma";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6">
+    <div className="flex min-h-screen flex-col items-center justify-center px-4 md:px-6">
       <div className="relative mb-10 flex items-center justify-center">
-        <div className="absolute opacity-50">
+        <div className="absolute hidden opacity-50 md:block">
           <AsciiPlasma color="#c8ff00" size={12} width={45} height={18} />
         </div>
-        <h1 className="relative z-10 text-[8rem] font-bold leading-none tracking-tighter text-text-primary md:text-[12rem]">
+        <h1 className="relative z-10 text-[4rem] font-bold leading-none tracking-tighter text-text-primary md:text-[8rem] lg:text-[12rem]">
           404
         </h1>
       </div>

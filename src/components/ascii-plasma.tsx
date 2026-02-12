@@ -6,76 +6,53 @@ const MONO = "'Courier New', Courier, monospace";
 
 export function AsciiPlasma({
   color = "#c8ff00",
+  hoverColor,
   size = 12,
   width = 44,
   height = 16,
   chars = " ░▒▓█▓▒░",
-  interactive = false,
 }: {
   color?: string;
+  hoverColor?: string;
   size?: number;
   width?: number;
   height?: number;
   chars?: string;
-  interactive?: boolean;
 }) {
   const [frame, setFrame] = useState(0);
-  const containerRef = useRef<HTMLPreElement>(null);
-  const mouse = useRef({ x: width / 2, y: height / 2 });
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => setFrame((v) => v + 1), 50);
     return () => clearInterval(id);
   }, []);
 
-  useEffect(() => {
-    if (!interactive) return;
-
-    const handleMove = (e: MouseEvent) => {
-      const el = containerRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      mouse.current = {
-        x: ((e.clientX - rect.left) / rect.width) * width,
-        y: ((e.clientY - rect.top) / rect.height) * height,
-      };
-    };
-
-    window.addEventListener("mousemove", handleMove);
-    return () => window.removeEventListener("mousemove", handleMove);
-  }, [interactive, width, height]);
-
   const lines = Array.from({ length: height }, (_, y) =>
     Array.from({ length: width }, (_, x) => {
-      const mx = mouse.current.x;
-      const my = mouse.current.y;
-      const distToMouse = interactive
-        ? Math.sqrt((x - mx) ** 2 + (y - my) ** 2)
-        : 0;
-      const mouseInfluence = interactive
-        ? Math.sin(distToMouse * 0.2 - frame * 0.06) * 0.5 / (1 + distToMouse * 0.05)
-        : 0;
-
       const v =
         Math.sin(x * 0.15 + frame * 0.05) +
         Math.sin(y * 0.2 + frame * 0.07) +
         Math.sin((x + y) * 0.1 + frame * 0.06) +
-        Math.sin(Math.sqrt(x * x + y * y) * 0.15 - frame * 0.04) +
-        mouseInfluence;
+        Math.sin(Math.sqrt(x * x + y * y) * 0.15 - frame * 0.04);
       const idx = Math.floor(((v + 4) / 8) * chars.length) % chars.length;
       return chars[idx];
     }).join("")
   );
 
+  const activeColor = hoverColor && hovered ? hoverColor : color;
+
   return (
     <pre
-      ref={containerRef}
+      onMouseEnter={hoverColor ? () => setHovered(true) : undefined}
+      onMouseLeave={hoverColor ? () => setHovered(false) : undefined}
       style={{
         fontFamily: MONO,
         fontSize: size,
         lineHeight: 1.1,
-        color,
+        color: activeColor,
         margin: 0,
+        overflow: "hidden",
+        transition: "color 0.4s ease",
       }}
     >
       {lines.join("\n")}

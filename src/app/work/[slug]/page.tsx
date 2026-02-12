@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageTransition } from "@/components/animation/page-transition";
 import { FadeIn } from "@/components/animation/fade-in";
-import { AsciiBlogHeader } from "@/components/ascii-blog-header";
+import { AsciiEqualizer } from "@/components/ascii-blog-header";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -75,10 +75,10 @@ export default async function ProjectPage({ params }: Props) {
             </Link>
           </FadeIn>
 
-          {/* ASCII decorative header */}
+          {/* ASCII equalizer */}
           <FadeIn delay={0.05}>
-            <div className="mb-6 overflow-hidden">
-              <AsciiBlogHeader />
+            <div className="mb-6 hidden overflow-hidden md:block">
+              <AsciiEqualizer bars={25} height={6} />
             </div>
           </FadeIn>
 

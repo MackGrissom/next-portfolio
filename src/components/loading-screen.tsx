@@ -34,7 +34,7 @@ export function LoadingScreen() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <AsciiProgressBar color="#c8ff00" size={12} width={30} />
+            <AsciiProgressBar color="#c8ff00" size={10} width={20} />
           </motion.div>
         </motion.div>
       )}

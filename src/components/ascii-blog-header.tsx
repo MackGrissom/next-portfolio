@@ -4,35 +4,43 @@ import { useState, useEffect } from "react";
 
 const MONO = "'Courier New', Courier, monospace";
 
-export function AsciiBlogHeader({ color = "#c8ff00" }: { color?: string }) {
-  const [frame, setFrame] = useState(0);
-  const width = 70;
-  const chars = " ░▒▓█▓▒░";
+export function AsciiEqualizer({
+  color = "#c8ff00",
+  size = 11,
+  bars = 20,
+  height = 8,
+}: {
+  color?: string;
+  size?: number;
+  bars?: number;
+  height?: number;
+}) {
+  const [f, setF] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setFrame((v) => v + 1), 60);
+    const id = setInterval(() => setF((v) => v + 1), 80);
     return () => clearInterval(id);
   }, []);
 
-  const lines = Array.from({ length: 3 }, (_, y) =>
-    Array.from({ length: width }, (_, x) => {
-      const v =
-        Math.sin(x * 0.12 + frame * 0.04 + y * 0.5) +
-        Math.sin(x * 0.07 - frame * 0.03 + y * 0.8);
-      const idx = Math.floor(((v + 2) / 4) * chars.length) % chars.length;
-      return chars[idx];
-    }).join("")
-  );
+  const lines = Array.from({ length: height }, (_, y) => {
+    const ry = height - 1 - y;
+    return Array.from({ length: bars }, (_, x) => {
+      const h =
+        ((Math.sin(x * 0.6 + f * 0.2) + 1) / 2) *
+        height *
+        (0.4 + 0.6 * ((Math.sin(x * 1.1 + f * 0.13) + 1) / 2));
+      return ry < h ? (ry > h - 1.5 ? "█" : "▓") : " ";
+    }).join(" ");
+  });
 
   return (
     <pre
       style={{
         fontFamily: MONO,
-        fontSize: 11,
-        lineHeight: 1.1,
+        fontSize: size,
+        lineHeight: 1.15,
         color,
         margin: 0,
-        opacity: 0.6,
         overflow: "hidden",
       }}
     >
@@ -77,6 +85,7 @@ export function AsciiPageAccent({
         lineHeight: 1.05,
         color,
         margin: 0,
+        overflow: "hidden",
       }}
     >
       {lines.join("\n")}
