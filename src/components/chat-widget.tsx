@@ -12,7 +12,7 @@ type Message = {
 
 function getPageMessage(pathname: string): string {
   if (pathname === "/") {
-    return "Hey! I'm Robert — if you're looking for help with AI, web development, or automation, I'd love to chat.";
+    return "Hey! I'm Mack — if you're looking for help with AI, web development, or automation, I'd love to chat.";
   }
   if (pathname === "/blog") {
     return "Looking for something specific? I can point you to the right article.";
@@ -102,7 +102,7 @@ export function ChatWidget() {
           {/* Header */}
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
             <div>
-              <p className="text-sm font-medium text-text-primary">Robert</p>
+              <p className="text-sm font-medium text-text-primary">Mack</p>
               <p className="text-[11px] text-text-tertiary">
                 Usually replies within a few hours
               </p>
