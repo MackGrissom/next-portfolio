@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { CharReveal } from "@/components/animation/text-reveal";
 import { Magnetic } from "@/components/animation/magnetic";
 import { ArrowUpRight } from "lucide-react";
+import { AsciiPlasma } from "@/components/ascii-plasma";
 
 const links = [
   { label: "Email", value: "mack@mackgrissom.io", href: "mailto:mack@mackgrissom.io" },
@@ -20,11 +21,9 @@ export function Contact() {
 
   return (
     <section id="contact" ref={ref} className="relative overflow-hidden py-20 md:py-32 lg:py-48">
-      {/* Giant background CTA */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <span className="select-none text-[20vw] font-bold uppercase leading-none tracking-tighter text-white/[0.02] md:text-[15vw]">
-          Let&apos;s Talk
-        </span>
+      {/* ASCII background accent */}
+      <div className="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none opacity-20 md:block">
+        <AsciiPlasma color="#c8ff00" size={10} width={40} height={20} />
       </div>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">

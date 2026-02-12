@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageTransition } from "@/components/animation/page-transition";
 import { FadeIn } from "@/components/animation/fade-in";
+import { AsciiBlogHeader } from "@/components/ascii-blog-header";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,13 @@ export default async function ProjectPage({ params }: Props) {
               <ArrowLeft size={16} />
               Back to work
             </Link>
+          </FadeIn>
+
+          {/* ASCII decorative header */}
+          <FadeIn delay={0.05}>
+            <div className="mb-6 overflow-hidden">
+              <AsciiBlogHeader />
+            </div>
           </FadeIn>
 
           {/* Header */}
