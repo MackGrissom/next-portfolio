@@ -89,7 +89,7 @@ export function ScrollRevealParagraph({
   const ref = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.95", "start 0.55"],
+    offset: ["start end", "start 0.75"],
   });
 
   const words = children.split(" ");

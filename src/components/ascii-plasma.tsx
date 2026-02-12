@@ -53,7 +53,7 @@ export function AsciiPlasma({
         ? Math.sqrt((x - mx) ** 2 + (y - my) ** 2)
         : 0;
       const mouseInfluence = interactive
-        ? Math.sin(distToMouse * 0.3 - frame * 0.1) * 1.5
+        ? Math.sin(distToMouse * 0.2 - frame * 0.06) * 0.5 / (1 + distToMouse * 0.05)
         : 0;
 
       const v =
