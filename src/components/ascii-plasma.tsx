@@ -10,27 +10,58 @@ export function AsciiPlasma({
   width = 44,
   height = 16,
   chars = " ░▒▓█▓▒░",
+  interactive = false,
 }: {
   color?: string;
   size?: number;
   width?: number;
   height?: number;
   chars?: string;
+  interactive?: boolean;
 }) {
   const [frame, setFrame] = useState(0);
+  const containerRef = useRef<HTMLPreElement>(null);
+  const mouse = useRef({ x: width / 2, y: height / 2 });
 
   useEffect(() => {
     const id = setInterval(() => setFrame((v) => v + 1), 50);
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (!interactive) return;
+
+    const handleMove = (e: MouseEvent) => {
+      const el = containerRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      mouse.current = {
+        x: ((e.clientX - rect.left) / rect.width) * width,
+        y: ((e.clientY - rect.top) / rect.height) * height,
+      };
+    };
+
+    window.addEventListener("mousemove", handleMove);
+    return () => window.removeEventListener("mousemove", handleMove);
+  }, [interactive, width, height]);
+
   const lines = Array.from({ length: height }, (_, y) =>
     Array.from({ length: width }, (_, x) => {
+      const mx = mouse.current.x;
+      const my = mouse.current.y;
+      const distToMouse = interactive
+        ? Math.sqrt((x - mx) ** 2 + (y - my) ** 2)
+        : 0;
+      const mouseInfluence = interactive
+        ? Math.sin(distToMouse * 0.3 - frame * 0.1) * 1.5
+        : 0;
+
       const v =
         Math.sin(x * 0.15 + frame * 0.05) +
         Math.sin(y * 0.2 + frame * 0.07) +
         Math.sin((x + y) * 0.1 + frame * 0.06) +
-        Math.sin(Math.sqrt(x * x + y * y) * 0.15 - frame * 0.04);
+        Math.sin(Math.sqrt(x * x + y * y) * 0.15 - frame * 0.04) +
+        mouseInfluence;
       const idx = Math.floor(((v + 4) / 8) * chars.length) % chars.length;
       return chars[idx];
     }).join("")
@@ -38,6 +69,7 @@ export function AsciiPlasma({
 
   return (
     <pre
+      ref={containerRef}
       style={{
         fontFamily: MONO,
         fontSize: size,
@@ -47,6 +79,76 @@ export function AsciiPlasma({
       }}
     >
       {lines.join("\n")}
+    </pre>
+  );
+}
+
+export function AsciiSpinner({
+  color = "#c8ff00",
+  size = 14,
+}: {
+  color?: string;
+  size?: number;
+}) {
+  const frames = ["⠋","⠙","⠹","⠸","⠼","⠴","⠦","⠧","⠇","⠏"];
+  const [f, setF] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setF((v) => (v + 1) % frames.length), 80);
+    return () => clearInterval(id);
+  }, [frames.length]);
+
+  return (
+    <pre
+      style={{
+        fontFamily: MONO,
+        fontSize: size * 3,
+        lineHeight: 1.2,
+        color,
+        margin: 0,
+        textAlign: "center",
+      }}
+    >
+      {frames[f]}{" "}
+      <span style={{ fontSize: size }}>Loading...</span>
+    </pre>
+  );
+}
+
+export function AsciiProgressBar({
+  color = "#c8ff00",
+  size = 14,
+  width = 40,
+}: {
+  color?: string;
+  size?: number;
+  width?: number;
+}) {
+  const [pct, setPct] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setPct((v) => (v + 1) % 101), 30);
+    return () => clearInterval(id);
+  }, []);
+
+  const filled = Math.round((pct / 100) * width);
+  const bar = "█".repeat(filled) + "░".repeat(width - filled);
+
+  return (
+    <pre
+      style={{
+        fontFamily: MONO,
+        fontSize: size,
+        lineHeight: 1.6,
+        color,
+        margin: 0,
+        textAlign: "center",
+      }}
+    >
+      {`┌${"─".repeat(width + 2)}┐\n`}
+      {`│ ${bar} │\n`}
+      {`└${"─".repeat(width + 2)}┘\n`}
+      {`     ${pct.toString().padStart(3)}% complete`}
     </pre>
   );
 }
