@@ -95,7 +95,7 @@ export function Hero() {
       {/* ASCII Plasma animation */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
+        animate={{ opacity: 0.8 }}
         transition={{ delay: 1.5, duration: 1.5 }}
         className="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none overflow-hidden md:block lg:right-6"
       >

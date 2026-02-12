@@ -21,7 +21,7 @@ export function LoadingScreen() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[9997] flex flex-col items-center justify-center bg-background"
         >
-          <div className="mb-6 overflow-hidden opacity-40">
+          <div className="mb-6 overflow-hidden">
             <AsciiPlasma color="#c8ff00" size={10} width={50} height={14} />
           </div>
           <motion.p
