@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { ChatWidget } from "@/components/chat-widget";
 import "./globals.css";
 
 const inter = Inter({
@@ -104,6 +105,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-text-primary antialiased">
         <SmoothScroll />
+        <ChatWidget />
         <Header />
         <main>{children}</main>
         <Footer />
