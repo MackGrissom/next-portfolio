@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { getBlogPosts } from "@/lib/blog";
 import { FadeIn } from "@/components/animation/fade-in";
 import { PageTransition } from "@/components/animation/page-transition";
-import { AsciiPageAccent } from "@/components/ascii-blog-header";
+import { AsciiEqualizer } from "@/components/ascii-blog-header";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -29,19 +29,18 @@ export default function BlogPage() {
     <PageTransition>
       <div className="px-6 pt-32 pb-16 md:pt-40">
         <div className="mx-auto max-w-3xl">
+          {/* Blog header with equalizer */}
           <FadeIn>
-            <div className="mb-8 flex items-start justify-between gap-6">
-              <div>
-                <h1 className="mb-4 text-2xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-                  Blog
-                </h1>
-                <p className="text-base text-text-secondary md:text-lg">
-                  Thoughts on AI, web development, and building modern software.
-                </p>
+            <div className="mb-10">
+              <div className="mb-6 hidden overflow-hidden md:block">
+                <AsciiEqualizer bars={35} height={10} size={10} />
               </div>
-              <div className="hidden shrink-0 opacity-50 md:block">
-                <AsciiPageAccent width={30} height={6} />
-              </div>
+              <h1 className="mb-4 text-2xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+                Blog
+              </h1>
+              <p className="text-base text-text-secondary md:text-lg">
+                Thoughts on AI, web development, and building modern software.
+              </p>
             </div>
           </FadeIn>
 

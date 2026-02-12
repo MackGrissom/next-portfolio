@@ -270,3 +270,67 @@ export function AsciiMatrixRain({
     </pre>
   );
 }
+
+export function AsciiFire({
+  color = "#c8ff00",
+  size = 11,
+  width = 60,
+  height = 10,
+}: {
+  color?: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) {
+  const buf = useRef(Array(width * (height + 2)).fill(0));
+  const [frame, setFrame] = useState("");
+  const palette = " .:-=+*#%@";
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      const b = buf.current;
+      for (let x = 0; x < width; x++) {
+        b[(height + 1) * width + x] =
+          Math.random() > 0.4
+            ? Math.min(palette.length - 1, 8 + ((Math.random() * 2) | 0))
+            : 0;
+      }
+      for (let y = 0; y < height + 1; y++) {
+        for (let x = 0; x < width; x++) {
+          const bl =
+            b[((y + 1) % (height + 2)) * width + ((x - 1 + width) % width)];
+          const bc = b[((y + 1) % (height + 2)) * width + x];
+          const br =
+            b[((y + 1) % (height + 2)) * width + ((x + 1) % width)];
+          const bc2 = b[((y + 2) % (height + 2)) * width + x];
+          b[y * width + x] = Math.max(0, ((bl + bc + br + bc2) / 4.04) | 0);
+        }
+      }
+      const lines: string[] = [];
+      for (let y = 0; y < height; y++) {
+        let row = "";
+        for (let x = 0; x < width; x++) {
+          row += palette[Math.min(b[y * width + x], palette.length - 1)];
+        }
+        lines.push(row);
+      }
+      setFrame(lines.join("\n"));
+    }, 60);
+    return () => clearInterval(id);
+  }, [width, height, palette]);
+
+  return (
+    <pre
+      style={{
+        fontFamily: "'Courier New', Courier, monospace",
+        fontSize: size,
+        lineHeight: 1.1,
+        color,
+        margin: 0,
+        overflow: "hidden",
+      }}
+    >
+      {frame}
+    </pre>
+  );
+}

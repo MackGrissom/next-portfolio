@@ -97,8 +97,8 @@ export function ScrollRevealParagraph({
   return (
     <p ref={ref} className={`flex flex-wrap ${className}`}>
       {words.map((word, i) => {
-        const start = i / words.length;
-        const end = start + 1 / words.length;
+        const start = (i / words.length) * 0.4;
+        const end = start + 0.4 / words.length;
         return (
           <Word key={i} range={[start, end]} progress={scrollYProgress}>
             {word}
