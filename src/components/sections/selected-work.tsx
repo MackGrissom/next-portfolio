@@ -20,11 +20,9 @@ const featuredProjects: ProjectRow[] = [
   { slug: "soulpunx", title: "SoulPunx", category: "Record Label Website", year: "2024", tags: ["Next.js", "Sanity CMS", "React"] },
   { slug: "tutorboost", title: "TutorBoost", category: "EdTech Platform", year: "2024", tags: ["React", "Node.js", "Education"] },
   { slug: "dock-appeal", title: "Dock Appeal", category: "Shopify E-Commerce", year: "2024", tags: ["Shopify", "E-Commerce", "Design"] },
-  { slug: "sumorize", title: "Sumorize", category: "AI Article Summarizer", year: "2023", tags: ["React", "Redux", "GPT-4"] },
   { slug: "simply-ai", title: "SimplyAI", category: "AI Toolkit Startup", year: "2023", tags: ["React", "Tailwind", "Redux"] },
   { slug: "empower-advocacy", title: "Empower Advocacy", category: "Consultant Landing Page", year: "2023", tags: ["React", "Tailwind", "Figma"] },
   { slug: "precision-stoneworks", title: "Precision Stoneworks", category: "Business Landing Page", year: "2023", tags: ["React", "Tailwind", "Vite"] },
-  { slug: "full-circle-web-design", title: "Full Circle Design", category: "Agency Website", year: "2023", tags: ["React", "Node.js", "Tailwind"] },
   { slug: "quantum", title: "Quantum", category: "Robotics Mock-up", year: "2023", tags: ["Next.js", "React"] },
 ];
 
