@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { CharReveal } from "@/components/animation/text-reveal";
 import { Magnetic } from "@/components/animation/magnetic";
-import { AsciiPlasma } from "@/components/ascii-plasma";
+import { AsciiPlasma, AsciiMatrixRain } from "@/components/ascii-plasma";
 
 export function Hero() {
   const containerRef = useRef(null);
@@ -32,9 +32,19 @@ export function Hero() {
       ref={containerRef}
       className="relative flex min-h-screen items-end overflow-hidden pb-12 md:pb-20"
     >
+      {/* Matrix rain background */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.07 }}
+        transition={{ delay: 2, duration: 2 }}
+        className="pointer-events-none absolute inset-0 hidden select-none overflow-hidden md:block"
+      >
+        <AsciiMatrixRain color="#c8ff00" size={14} width={120} height={50} />
+      </motion.div>
+
       <motion.div
         style={{ y, opacity, scale }}
-        className="w-full px-6 md:px-10"
+        className="relative w-full px-6 md:px-10"
       >
         <div className="mx-auto max-w-[1400px]">
           {/* Eyebrow */}
