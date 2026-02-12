@@ -263,7 +263,6 @@ export function AsciiMatrixRain({
         lineHeight: 1.05,
         color,
         margin: 0,
-        opacity: 0.6,
       }}
     >
       {frame}

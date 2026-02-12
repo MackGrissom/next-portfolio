@@ -35,11 +35,11 @@ export function Hero() {
       {/* Matrix rain background */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.07 }}
+        animate={{ opacity: 0.15 }}
         transition={{ delay: 2, duration: 2 }}
         className="pointer-events-none absolute inset-0 hidden select-none overflow-hidden md:block"
       >
-        <AsciiMatrixRain color="#c8ff00" size={14} width={120} height={50} />
+        <AsciiMatrixRain color="#c8ff00" size={14} width={150} height={60} />
       </motion.div>
 
       <motion.div
