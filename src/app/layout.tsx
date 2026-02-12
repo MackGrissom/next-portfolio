@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { ChatWidget } from "@/components/chat-widget";
+import { LoadingScreen } from "@/components/loading-screen";
 import "./globals.css";
 
 const inter = Inter({
@@ -105,6 +106,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-text-primary antialiased">
         <SmoothScroll />
+        <LoadingScreen />
         <ChatWidget />
         <Header />
         <main>{children}</main>

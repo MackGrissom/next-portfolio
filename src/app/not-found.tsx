@@ -1,12 +1,14 @@
-import Link from "next/link";
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { AsciiGlitch } from "@/components/ascii-plasma";
 
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6">
-      <p className="mb-4 text-sm font-medium uppercase tracking-widest text-text-tertiary">
-        404
-      </p>
+      <div className="mb-8">
+        <AsciiGlitch text="404  —  NOT  FOUND" color="#c8ff00" size={13} width={40} />
+      </div>
       <h1 className="mb-4 text-4xl font-bold tracking-tighter md:text-5xl">
         Page not found
       </h1>
