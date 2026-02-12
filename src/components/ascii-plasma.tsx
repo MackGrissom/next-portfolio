@@ -104,7 +104,7 @@ export function AsciiProgressBar({
   const [pct, setPct] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setPct((v) => (v + 1) % 101), 30);
+    const id = setInterval(() => setPct((v) => Math.min(v + 1, 100)), 30);
     return () => clearInterval(id);
   }, []);
 
@@ -274,53 +274,80 @@ export function AsciiMatrixRain({
 export function AsciiFire({
   color = "#c8ff00",
   size = 11,
-  width = 60,
+  width,
   height = 10,
+  fullWidth = false,
 }: {
   color?: string;
   size?: number;
   width?: number;
   height?: number;
+  fullWidth?: boolean;
 }) {
-  const buf = useRef(Array(width * (height + 2)).fill(0));
+  const containerRef = useRef<HTMLPreElement>(null);
+  const [cols, setCols] = useState(width ?? 60);
+  const buf = useRef<number[]>([]);
   const [frame, setFrame] = useState("");
   const palette = " .:-=+*#%@";
 
+  // Measure container to calculate columns when fullWidth
+  useEffect(() => {
+    if (!fullWidth || width) return;
+    const measure = () => {
+      if (containerRef.current) {
+        const charWidth = size * 0.6; // monospace char width approximation
+        const containerWidth = containerRef.current.parentElement?.clientWidth ?? window.innerWidth;
+        setCols(Math.floor(containerWidth / charWidth));
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [fullWidth, width, size]);
+
+  // Reset buffer when cols change
+  useEffect(() => {
+    buf.current = Array(cols * (height + 2)).fill(0);
+  }, [cols, height]);
+
   useEffect(() => {
     const id = setInterval(() => {
+      const w = cols;
       const b = buf.current;
-      for (let x = 0; x < width; x++) {
-        b[(height + 1) * width + x] =
+      if (b.length !== w * (height + 2)) return;
+      for (let x = 0; x < w; x++) {
+        b[(height + 1) * w + x] =
           Math.random() > 0.4
             ? Math.min(palette.length - 1, 8 + ((Math.random() * 2) | 0))
             : 0;
       }
       for (let y = 0; y < height + 1; y++) {
-        for (let x = 0; x < width; x++) {
+        for (let x = 0; x < w; x++) {
           const bl =
-            b[((y + 1) % (height + 2)) * width + ((x - 1 + width) % width)];
-          const bc = b[((y + 1) % (height + 2)) * width + x];
+            b[((y + 1) % (height + 2)) * w + ((x - 1 + w) % w)];
+          const bc = b[((y + 1) % (height + 2)) * w + x];
           const br =
-            b[((y + 1) % (height + 2)) * width + ((x + 1) % width)];
-          const bc2 = b[((y + 2) % (height + 2)) * width + x];
-          b[y * width + x] = Math.max(0, ((bl + bc + br + bc2) / 4.04) | 0);
+            b[((y + 1) % (height + 2)) * w + ((x + 1) % w)];
+          const bc2 = b[((y + 2) % (height + 2)) * w + x];
+          b[y * w + x] = Math.max(0, ((bl + bc + br + bc2) / 4.04) | 0);
         }
       }
       const lines: string[] = [];
       for (let y = 0; y < height; y++) {
         let row = "";
-        for (let x = 0; x < width; x++) {
-          row += palette[Math.min(b[y * width + x], palette.length - 1)];
+        for (let x = 0; x < w; x++) {
+          row += palette[Math.min(b[y * w + x], palette.length - 1)];
         }
         lines.push(row);
       }
       setFrame(lines.join("\n"));
     }, 60);
     return () => clearInterval(id);
-  }, [width, height, palette]);
+  }, [cols, height, palette]);
 
   return (
     <pre
+      ref={containerRef}
       style={{
         fontFamily: "'Courier New', Courier, monospace",
         fontSize: size,
@@ -328,6 +355,7 @@ export function AsciiFire({
         color,
         margin: 0,
         overflow: "hidden",
+        width: fullWidth ? "100%" : undefined,
       }}
     >
       {frame}

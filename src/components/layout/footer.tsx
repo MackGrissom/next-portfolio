@@ -22,7 +22,7 @@ export function Footer() {
     <footer ref={ref} className="border-t border-border">
       {/* Fire ASCII */}
       <div className="pointer-events-none hidden select-none overflow-hidden opacity-40 md:block">
-        <AsciiFire color="#c8ff00" size={9} width={120} height={6} />
+        <AsciiFire color="#c8ff00" size={9} height={6} fullWidth />
       </div>
 
       <div className="mx-auto max-w-[1400px] px-6 py-8 md:px-10">
